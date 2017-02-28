@@ -1,0 +1,6 @@
+{
+  "extends": "skyscanner",
+  "env": {
+    "node": true
+  }
+}

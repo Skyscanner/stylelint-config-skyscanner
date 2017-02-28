@@ -1,0 +1,38 @@
+{
+  "name": "stylelint-config-skyscanner",
+  "version": "0.0.0",
+  "description": "Skyscanner's stylelint config.",
+  "main": "index.js",
+  "keywords": [
+    "stylelint",
+    "scss",
+    "javascript",
+    "skyscanner"
+  ],
+  "author": "Dan Ristea <dan.ristea@skyscanner.net>",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-skyscanner": "^1.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.7.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.9.0"
+  },
+  "dependencies": {
+    "stylelint-config-standard": "16.0.0",
+    "stylelint-declaration-strict-value": "1.0.3",
+    "stylelint-order": "0.4.0",
+    "stylelint-scss": "1.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skyscanner/stylelint-config-skyscanner"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}
