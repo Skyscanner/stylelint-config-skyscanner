@@ -31,22 +31,22 @@ module.exports = {
     'number-leading-zero': 'never',
     'unit-blacklist': ['px'],
     'selector-class-pattern': [
-      new RegExp(`^(${pascalCase}|${kebabCase})` + // block
+      `^(${pascalCase}|${kebabCase})` + // block
         `(__(${camelCase}|${kebabCase}))?` + // element
-        `(--(${camelCase}|${kebabCase}))?$`), // modifier
+        `(--(${camelCase}|${kebabCase}))?$`, // modifier
       {
         resolveNestedSelectors: true,
       },
     ],
-    'scss/at-function-pattern': kebabCase,
+    'scss/at-function-pattern': `^${kebabCase}$`,
     'scss/at-import-no-partial-leading-underscore': true,
     'scss/at-mixin-argumentless-call-parentheses': 'never',
-    'scss/at-mixin-pattern': `${kebabCase}(--${kebabCase})?`,
+    'scss/at-mixin-pattern': `^_?${kebabCase}(__${kebabCase})?(--${kebabCase}?)?-?$`,
     'scss/dollar-variable-colon-space-after': 'always-single-line',
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-no-missing-interpolation': true,
-    'scss/dollar-variable-pattern': kebabCase,
-    'scss/percent-placeholder-pattern': kebabCase,
+    'scss/dollar-variable-pattern': `^${kebabCase}$`,
+    'scss/percent-placeholder-pattern': `^${kebabCase}$`,
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/declaration-nested-properties-no-divided-groups': true,
     'scss/operator-no-newline-after': true,
