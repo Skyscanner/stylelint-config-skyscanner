@@ -90,7 +90,7 @@ module.exports = {
       },
       'rules',
     ],
-    'order/properties-order': [
+    'order/properties-order': [[
       'position',
       'top',
       'right',
@@ -197,6 +197,8 @@ module.exports = {
       'speak',
       'table-layout',
       'vertical-align',
-    ],
+    ], {
+      unspecified: 'bottomAlphabetical',
+    }],
   },
 };
