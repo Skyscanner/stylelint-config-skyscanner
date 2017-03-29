@@ -2,6 +2,7 @@
 ## [0.1.3]
 ### Added
 - `at-rule-no-vendor-prefix`, `media-feature-name-no-vendor-prefix`, `property-no-vendor-prefix`, `selector-no-vendor-prefix`, `value-no-vendor-prefix` to encourage Autoprefixer usage
+- `string-quotes`, `selector-attribute-quotes`, `font-family-name-quotes` to standardise string usage
 
 ## [0.1.2]
 ### Changed
