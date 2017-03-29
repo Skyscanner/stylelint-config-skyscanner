@@ -1,4 +1,8 @@
 # Change Log
+## [0.1.3]
+### Added
+- `at-rule-no-vendor-prefix`, `media-feature-name-no-vendor-prefix`, `property-no-vendor-prefix`, `selector-no-vendor-prefix`, `value-no-vendor-prefix` to encourage Autoprefixer usage
+
 ## [0.1.2]
 ### Changed
 - `scss/at-mixin-pattern` changed to include some valid edge cases 
