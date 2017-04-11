@@ -36,6 +36,7 @@ module.exports = {
         `(--(${camelCase}|${kebabCase}))?$`, // modifier
       {
         resolveNestedSelectors: true,
+        message: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#Class-selector-pattern for pattern (selector-class-pattern)',
       },
     ],
     'at-rule-no-vendor-prefix': true,
@@ -46,15 +47,23 @@ module.exports = {
     'string-quotes': 'single',
     'selector-attribute-quotes': 'never',
     'font-family-name-quotes': 'always-where-recommended',
-    'scss/at-function-pattern': `^${kebabCase}$`,
+    'scss/at-function-pattern': [`^${kebabCase}$`, {
+      message: 'Expected function to be kebab-case (scss/at-function-pattern)',
+    }],
     'scss/at-import-no-partial-leading-underscore': true,
     'scss/at-mixin-argumentless-call-parentheses': 'never',
-    'scss/at-mixin-pattern': `^_?${kebabCase}(__${kebabCase})?(--${kebabCase}?)?-?$`,
+    'scss/at-mixin-pattern': [`^_?${kebabCase}(__${kebabCase})?(--${kebabCase}?)?-?$`, {
+      message: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#Mixin-pattern for pattern (scss/at-mixin-pattern)',
+    }],
     'scss/dollar-variable-colon-space-after': 'always-single-line',
     'scss/dollar-variable-colon-space-before': 'never',
     'scss/dollar-variable-no-missing-interpolation': true,
-    'scss/dollar-variable-pattern': `^${kebabCase}$`,
-    'scss/percent-placeholder-pattern': `^${kebabCase}$`,
+    'scss/dollar-variable-pattern': [`^${kebabCase}$`, {
+      message: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)',
+    }],
+    'scss/percent-placeholder-pattern': [`^${kebabCase}$`, {
+      message: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)',
+    }],
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/declaration-nested-properties-no-divided-groups': true,
     'scss/operator-no-newline-after': true,
