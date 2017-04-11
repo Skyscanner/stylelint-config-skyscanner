@@ -1,4 +1,12 @@
 # Change Log
+## [0.1.4]
+### Added
+- Added tests
+- Added message to `selector-class-pattern` and `scss/at-mixin-pattern`
+
+### Changed
+- Upgraded `stylelint-order` and `stylelint-scss` to fix downstream bugs
+
 ## [0.1.3]
 ### Added
 - `at-rule-no-vendor-prefix`, `media-feature-name-no-vendor-prefix`, `property-no-vendor-prefix`, `selector-no-vendor-prefix`, `value-no-vendor-prefix` to encourage Autoprefixer usage
