@@ -17,7 +17,9 @@
     "eslint-config-skyscanner": "^1.0.0",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.7.1"
+    "eslint-plugin-react": "^6.7.1",
+    "jest": "^19.0.2",
+    "stylelint": "^7.9.0"
   },
   "peerDependencies": {
     "stylelint": "^7.9.0"
@@ -33,6 +35,9 @@
     "url": "https://github.com/Skyscanner/stylelint-config-skyscanner"
   },
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint . --ignore-path .gitignore",
+    "lint:fix": "npm run lint -- --fix",
+    "pretest": "npm run lint",
+    "test": "jest"
   }
 }
