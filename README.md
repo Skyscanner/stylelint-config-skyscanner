@@ -2,7 +2,7 @@
 
 Skyscanner's stylelint config.
 
-This stylelint config is based on `stylelint-config-skyscanner` with Skyscanner specific additions and is meant to be used with Backpack and `backpack-react-scripts`. Rules encourage developers to leverage the Backpack design system and to outsource development dependencies to `backpack-react-scripts`.
+This stylelint config is based on [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) with Skyscanner specific additions and is meant to be used with Backpack and `backpack-react-scripts`. Rules encourage developers to leverage the Backpack design system and to outsource development dependencies to `backpack-react-scripts`.
 
 ## Installation
 
