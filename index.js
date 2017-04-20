@@ -36,7 +36,7 @@ module.exports = {
         `(--(${camelCase}|${kebabCase}))?$`, // modifier
       {
         resolveNestedSelectors: true,
-        message: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#Class-selector-pattern for pattern (selector-class-pattern)',
+        message: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
       },
     ],
     'at-rule-no-vendor-prefix': true,
@@ -53,7 +53,7 @@ module.exports = {
     'scss/at-import-no-partial-leading-underscore': true,
     'scss/at-mixin-argumentless-call-parentheses': 'never',
     'scss/at-mixin-pattern': [`^_?${kebabCase}(__${kebabCase})?(--${kebabCase}?)?-?$`, {
-      message: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#Mixin-pattern for pattern (scss/at-mixin-pattern)',
+      message: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)',
     }],
     'scss/dollar-variable-colon-space-after': 'always-single-line',
     'scss/dollar-variable-colon-space-before': 'never',

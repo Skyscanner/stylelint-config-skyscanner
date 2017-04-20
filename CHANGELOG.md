@@ -1,4 +1,8 @@
 # Change Log
+## [0.1.5]
+### Fixed
+- Fixed links in messages for `selector-class-pattern` and `scss/at-mixin-pattern`
+
 ## [0.1.4]
 ### Added
 - Added tests
