@@ -2,6 +2,7 @@
 ## 0.2.0
 ### Added
 - Flex and grid rules to `order/order` rule
+- Added `selector-no-type` and `selector-no-universal` as warnings (for now) to prevent interference
 
 ## 0.1.5
 ### Fixed

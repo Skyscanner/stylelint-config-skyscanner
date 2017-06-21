@@ -26,6 +26,13 @@ module.exports = {
   ],
   rules: {
     'selector-no-id': true,
+    'selector-no-universal': [true, {
+      severity: 'warning',
+    }],
+    'selector-no-type': [true, {
+      ignore: ['compounded', 'descendant'],
+      severity: 'warning',
+    }],
     'selector-max-compound-selectors': 2,
     'declaration-no-important': true,
     'number-leading-zero': 'never',
