@@ -4,6 +4,7 @@
 - Flex and grid rules to `order/order` rule
 - Added `selector-no-type` and `selector-no-universal` as warnings (for now) to prevent interference
 - Allow `@else` and `@else if` SCSS rules to be on same line as `@if` closing bracket
+- Styleguide!
 
 ## 0.1.5
 ### Fixed
