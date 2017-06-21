@@ -144,6 +144,16 @@ const validCss = (
     display: block;
   }
 }
+
+.AtRules {
+  @if $display == 'block' {
+    display: 'block';
+  } @else if $display == 'inline' {
+    display: 'inline';
+  } @else {
+    display: 'inline-block';
+  }
+}
 `);
 
 describe('flags no warnings with valid css', () => {
@@ -296,6 +306,49 @@ describe('flags pattern errors', () => {
       expect.objectContaining({ text: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)' }),
       expect.objectContaining({ text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)' }),
       expect.objectContaining({ text: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)' }),
+    ])
+  )));
+});
+const invalidAtRules = (
+`.AtRules {
+  @if $display == 'block' {
+    display: 'block';
+  }
+
+  @else if $display == 'inline' {
+    display: 'inline';
+  }
+  @else {
+    display: 'inline-block';
+  }
+}
+`);
+
+describe('at rules errors', () => {
+  let result;
+
+  beforeEach(() => (
+    result = stylelint.lint({
+      code: invalidAtRules,
+      config,
+    })
+  ));
+
+  it('did error', () => result.then(data => (
+    expect(data.errored).toBeTruthy()
+  )));
+
+  it('raised correct number of warnings', () => result.then(data => (
+    expect(data.results[0].warnings.length).toBe(5)
+  )));
+
+  it('raised correct rules', () => result.then(data => (
+    expect(data.results[0].warnings).toEqual([
+      expect.objectContaining({ rule: 'scss/at-else-closing-brace-newline-after' }),
+      expect.objectContaining({ rule: 'scss/at-else-closing-brace-space-after' }),
+      expect.objectContaining({ rule: 'scss/at-else-empty-line-before' }),
+      expect.objectContaining({ rule: 'scss/at-if-closing-brace-newline-after' }),
+      expect.objectContaining({ rule: 'scss/at-if-closing-brace-space-after' }),
     ])
   )));
 });

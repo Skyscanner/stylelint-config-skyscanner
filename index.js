@@ -54,6 +54,19 @@ module.exports = {
     'string-quotes': 'single',
     'selector-attribute-quotes': 'never',
     'font-family-name-quotes': 'always-where-recommended',
+    'at-rule-empty-line-before': ['always', {
+      except: [
+        'blockless-after-same-name-blockless',
+        'first-nested',
+      ],
+      ignore: ['after-comment'],
+      ignoreAtRules: ['else'],
+    }],
+    'block-closing-brace-newline-after': [
+      'always', {
+        ignoreAtRules: ['if', 'else'],
+      },
+    ],
     'scss/at-function-pattern': [`^${kebabCase}$`, {
       message: 'Expected function to be kebab-case (scss/at-function-pattern)',
     }],
@@ -76,6 +89,11 @@ module.exports = {
     'scss/operator-no-newline-after': true,
     'scss/operator-no-unspaced': true,
     'scss/selector-no-redundant-nesting-selector': true,
+    'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
+    'scss/at-else-closing-brace-space-after': 'always-intermediate',
+    'scss/at-else-empty-line-before': 'never',
+    'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
+    'scss/at-if-closing-brace-space-after': 'always-intermediate',
     'scale-unlimited/declaration-strict-value': [
       ['/color/', 'fill', 'stroke', 'font-size', 'line-height'], {
         ignoreKeywords: {
