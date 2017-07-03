@@ -4,8 +4,14 @@
 - Flex and grid rules to `order/order` rule
 - Added `selector-max-type` and `selector-max-universal` as warnings (for now) to prevent interference
 - Allow `@else` and `@else if` SCSS rules to be on same line as `@if` closing bracket
-- `selector-no-id` rules replaced by functionally identical `selector-max-id` 
 - Styleguide!
+
+### Changed
+- `selector-no-id` rules replaced by functionally identical `selector-max-id`
+- Updated dependencies and peerDependencies:
+  - `stylelint` to `7.12.0`
+  - `stylelint-scss` to `1.4.4`
+  - `stylelint-order` to `0.5.0`
 
 ## 0.1.5
 ### Fixed
