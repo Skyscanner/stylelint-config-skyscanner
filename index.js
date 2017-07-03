@@ -25,7 +25,7 @@ module.exports = {
     'stylelint-order',
   ],
   rules: {
-    'selector-no-id': true,
+    'selector-max-id': 0,
     'selector-no-universal': [true, {
       severity: 'warning',
     }],
