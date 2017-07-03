@@ -2,7 +2,7 @@
 ## 0.2.0
 ### Added
 - Flex and grid rules to `order/order` rule
-- Added `selector-no-type` and `selector-no-universal` as warnings (for now) to prevent interference
+- Added `selector-max-type` and `selector-max-universal` as warnings (for now) to prevent interference
 - Allow `@else` and `@else if` SCSS rules to be on same line as `@if` closing bracket
 - `selector-no-id` rules replaced by functionally identical `selector-max-id` 
 - Styleguide!

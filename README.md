@@ -27,15 +27,15 @@ Use CSS modules to avoid conflicts between your selectors and any others on the 
 
 #### Universal
 Never use the universal selector (`*`). You will most likely be sharing the page with other components, and it will cause interference.
-Rule: `selector-no-universal`
+Rule: `selector-max-universal`
 
 #### Type
 Never use top level type selectors. You will most likely be sharing the page with other components, and it will cause interference.
-Rule: `selector-no-type`
+Rule: `selector-max-type`
 
 #### Id
 Never use ids. The high specificity of ids can cause unexpected interactions between styles. Leave ids only for JavaScript bindings (eg. React root elements).
-Rule: `selector-no-id`
+Rule: `selector-max-id`
 
 #### Class
 Class names should be in the [Block Element Modifier​ (BEM)](http://getbem.com/introduction/) style. BEM makes CSS easier to maintain and reason about as it makes clear what the connection between styles and HTML is. It also encourages a compositional approach to writing modifiers. 

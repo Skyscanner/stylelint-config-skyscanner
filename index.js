@@ -26,10 +26,10 @@ module.exports = {
   ],
   rules: {
     'selector-max-id': 0,
-    'selector-no-universal': [true, {
+    'selector-max-universal': [0, {
       severity: 'warning',
     }],
-    'selector-no-type': [true, {
+    'selector-max-type': [0, {
       ignore: ['compounded', 'descendant'],
       severity: 'warning',
     }],
