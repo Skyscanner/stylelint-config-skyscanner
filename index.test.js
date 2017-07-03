@@ -181,7 +181,7 @@ const invalidSelectorNoIdCSS = (
 }
 `);
 
-describe('flags selector-no-id', () => {
+describe('flags selector-max-id', () => {
   let result;
 
   beforeEach(() => {
@@ -200,7 +200,7 @@ describe('flags selector-no-id', () => {
   )));
 
   it('raised correct rule', () => result.then(data => (
-    expect(data.results[0].warnings[0].rule).toBe('selector-no-id')
+    expect(data.results[0].warnings[0].rule).toBe('selector-max-id')
   )));
 });
 
