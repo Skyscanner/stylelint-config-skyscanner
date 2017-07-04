@@ -26,9 +26,6 @@ module.exports = {
   ],
   rules: {
     'selector-max-id': 0,
-    'selector-max-universal': [0, {
-      severity: 'warning',
-    }],
     'selector-max-type': [0, {
       ignore: ['compounded', 'descendant'],
       severity: 'warning',
@@ -259,6 +256,8 @@ module.exports = {
       'empty-cells',
       'opacity',
       'overflow',
+      'overflow-x',
+      'overflow-y',
       'quotes',
       'speak',
       'table-layout',

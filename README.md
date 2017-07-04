@@ -26,8 +26,7 @@ CSS is global by default. Whenever you write a CSS selector and expose it on a p
 Use CSS modules to avoid conflicts between your selectors and any others on the page. CSS module supports comes with `backpack-react-scripts`.
 
 #### Universal
-Never use the universal selector (`*`). You will most likely be sharing the page with other components, and it will cause interference.
-Rule: `selector-max-universal`
+Avoid using top level universal selectors (`*`). You will most likely be sharing the page with other components, and it will cause interference.
 
 #### Type
 Never use top level type selectors. You will most likely be sharing the page with other components, and it will cause interference.
