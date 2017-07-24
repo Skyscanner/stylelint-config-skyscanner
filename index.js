@@ -27,7 +27,7 @@ module.exports = {
   rules: {
     'selector-max-id': 0,
     'selector-max-type': [0, {
-      ignore: ['compounded', 'descendant'],
+      ignore: ['compounded', 'descendant', 'child'],
       severity: 'warning',
     }],
     'selector-max-compound-selectors': 2,
