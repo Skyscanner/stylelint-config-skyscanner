@@ -1,5 +1,5 @@
 # Change Log
-## 0.2.0
+## 1.0.0
 ### Added
 - Flex and grid rules to `order/order` rule
 - Added `selector-max-type` as warning (for now) to prevent interference between stylesheets
