@@ -64,6 +64,8 @@ module.exports = {
         ignoreAtRules: ['if', 'else'],
       },
     ],
+    'at-rule-no-unknown': null,
+    'scss/at-rule-no-unknown': true,
     'scss/at-function-pattern': [`^${kebabCase}$`, {
       message: 'Expected function to be kebab-case (scss/at-function-pattern)',
     }],

@@ -268,12 +268,12 @@ const invalidPatternCSS = (
 describe('flags pattern errors', () => {
   let result;
 
-  beforeEach(() => (
+  beforeEach(() => {
     result = stylelint.lint({
       code: invalidPatternCSS,
       config,
-    })
-  ));
+    });
+  });
 
   it('did error', () => result.then(data => (
     expect(data.errored).toBeTruthy()
@@ -327,12 +327,12 @@ const invalidAtRules = (
 describe('at rules errors', () => {
   let result;
 
-  beforeEach(() => (
+  beforeEach(() => {
     result = stylelint.lint({
       code: invalidAtRules,
       config,
-    })
-  ));
+    });
+  });
 
   it('did error', () => result.then(data => (
     expect(data.errored).toBeTruthy()

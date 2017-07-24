@@ -9,9 +9,10 @@
 ### Changed
 - `selector-no-id` rules replaced by functionally identical `selector-max-id`
 - Updated dependencies and peerDependencies:
-  - `stylelint` to `7.12.0`
-  - `stylelint-scss` to `1.4.4`
-  - `stylelint-order` to `0.5.0`
+  - `stylelint` to `8.0.0`
+  - `stylelint-scss` to `1.5.1`
+  - `stylelint-order` to `0.6.0`
+  - `stylelint-declaration-strict-value` to `1.0.4`
 
 ## 0.1.5
 ### Fixed
