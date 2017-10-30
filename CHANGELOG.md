@@ -1,4 +1,12 @@
 # Change Log
+
+## UNRELEASED
+
+### Fixed
+- Relaxed semver range for `stylelint` peer dependency from `~8.0.0` to `^8.0.0`
+- Upgraded `stylelint-scss` from `1.5.1` to `^2.1.0`
+- Upgraded `stylelint-order` from `0.6.0` to `"^0.7.0`
+
 ## 1.0.0
 ### Added
 - Flex and grid rules to `order/order` rule
@@ -34,15 +42,15 @@
 +
 ## 0.1.2
 ### Changed
-- `scss/at-mixin-pattern` changed to include some valid edge cases 
+- `scss/at-mixin-pattern` changed to include some valid edge cases
 
 ### Fixed
 - Regex for `scss/at-function-pattern`, `scss/at-mixin-pattern`, `scss/dollar-variable-pattern`, and `scss/percent-placeholder-pattern` now works as intended
 
 ## 0.1.1
 ### Changed
-- `scss/at-function-pattern`, `scss/at-mixin-pattern`, `scss/dollar-variable-pattern`, and `scss/percent-placeholder-pattern` updated to use the same kebab case regex as class names 
-### Removed 
+- `scss/at-function-pattern`, `scss/at-mixin-pattern`, `scss/dollar-variable-pattern`, and `scss/percent-placeholder-pattern` updated to use the same kebab case regex as class names
+### Removed
 - `scss/operator-no-newline-before` as it clashed with `scss/operator-no-newline-after`
 
 ## 0.1.0 - Initial config

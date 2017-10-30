@@ -3,7 +3,7 @@ const config = require('.');
 
 
 const validCss = (
-`$kebab-case-variable: 3rem;
+  `$kebab-case-variable: 3rem;
 
 @mixin kebab-case-mixin {
   @content;
@@ -176,7 +176,7 @@ describe('flags no warnings with valid css', () => {
 });
 
 const invalidSelectorNoIdCSS = (
-`#invalid-id {
+  `#invalid-id {
   display: block;
 }
 `);
@@ -205,7 +205,7 @@ describe('flags selector-max-id', () => {
 });
 
 const invalidNumberLeadingZoCSS = (
-`.Block {
+  `.Block {
   height: 0.5em;
 }
 `);
@@ -234,7 +234,7 @@ describe('flags number-leading-zero', () => {
 });
 
 const invalidPatternCSS = (
-`$DollarVariable: 1rem;
+  `$DollarVariable: 1rem;
 
 %PlaceHolder {
   display: block;
@@ -310,7 +310,7 @@ describe('flags pattern errors', () => {
   )));
 });
 const invalidAtRules = (
-`.AtRules {
+  `.AtRules {
   @if $display == 'block' {
     display: 'block';
   }
