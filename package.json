@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-skyscanner",
-  "version": "1.0.1-0",
+  "version": "1.0.1",
   "description": "Skyscanner's stylelint config.",
   "main": "index.js",
   "keywords": [
