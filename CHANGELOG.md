@@ -2,6 +2,9 @@
 
 ## UNRELEASED
 
+_Nothing yet..._
+
+## 1.0.1
 ### Fixed
 - Relaxed semver range for `stylelint` peer dependency from `~8.0.0` to `^8.0.0`
 - Upgraded `stylelint-scss` from `1.5.1` to `^2.1.0`
