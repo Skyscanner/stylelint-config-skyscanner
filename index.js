@@ -65,6 +65,7 @@ module.exports = {
       },
     ],
     'at-rule-no-unknown': null,
+    'no-descending-specificity': null,
     'scss/at-rule-no-unknown': true,
     'scss/at-function-pattern': [`^${kebabCase}$`, {
       message: 'Expected function to be kebab-case (scss/at-function-pattern)',
