@@ -2,6 +2,9 @@
 
 ## UNRELEASED
 
+_Nothing yet..._
+
+## 2.0.0-beta.2
 ### Fixed
 - Disabled `no-descending-specificity` rule
 
