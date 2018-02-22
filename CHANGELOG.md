@@ -2,7 +2,12 @@
 
 ## UNRELEASED
 
-_Nothing yet..._
+### TODO
+- Upgraded `stylelint` peerDependency to `^9.1.1`
+- Upgraded dependencies:
+  - `stylelint-config-standard` to `18.1.0`
+  - `stylelint-order` to `^0.8.1`
+  - `stylelint-scss` to `^2.4.0`
 
 ## 1.0.1
 ### Fixed
