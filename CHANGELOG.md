@@ -2,7 +2,10 @@
 
 ## UNRELEASED
 
-### TODO
+_Nothing yet..._
+
+## 2.0.0-beta.1
+### Changed
 - Upgraded `stylelint` peerDependency to `^9.1.1`
 - Upgraded dependencies:
   - `stylelint-config-standard` to `18.1.0`
