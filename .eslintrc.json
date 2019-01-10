@@ -1,0 +1,10 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "skyscanner-with-prettier"
+  ],
+  "env": {
+    "node": true,
+    "jest": true
+  }
+}

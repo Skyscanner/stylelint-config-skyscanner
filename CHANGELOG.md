@@ -2,7 +2,9 @@
 
 ## UNRELEASED
 
-_Nothing yet..._
+### Fixed
+- Upgraded dependencies
+  - TODO: highlight breakign changes.
 
 ## 2.0.0-beta.2
 ### Fixed

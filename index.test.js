@@ -1,9 +1,7 @@
 const stylelint = require('stylelint');
 const config = require('.');
 
-
-const validCss = (
-  `$kebab-case-variable: 3rem;
+const validCss = `$kebab-case-variable: 3rem;
 
 @mixin kebab-case-mixin {
   @content;
@@ -154,7 +152,7 @@ const validCss = (
     display: 'inline-block';
   }
 }
-`);
+`;
 
 describe('flags no warnings with valid css', () => {
   let result;
@@ -166,20 +164,17 @@ describe('flags no warnings with valid css', () => {
     });
   });
 
-  it('did not error', () => result.then(data => (
-    expect(data.errored).toBeFalsy()
-  )));
+  it('did not error', () =>
+    result.then(data => expect(data.errored).toBeFalsy()));
 
-  it('raised no warnings', () => result.then(data => (
-    expect(data.results[0].warnings.length).toBe(0)
-  )));
+  it('raised no warnings', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(0)));
 });
 
-const invalidSelectorNoIdCSS = (
-  `#invalid-id {
+const invalidSelectorNoIdCSS = `#invalid-id {
   display: block;
 }
-`);
+`;
 
 describe('flags selector-max-id', () => {
   let result;
@@ -191,24 +186,21 @@ describe('flags selector-max-id', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
-    expect(data.errored).toBeTruthy()
-  )));
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
 
-  it('raised one warning', () => result.then(data => (
-    expect(data.results[0].warnings.length).toBe(1)
-  )));
+  it('raised one warning', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
 
-  it('raised correct rule', () => result.then(data => (
-    expect(data.results[0].warnings[0].rule).toBe('selector-max-id')
-  )));
+  it('raised correct rule', () =>
+    result.then(data =>
+      expect(data.results[0].warnings[0].rule).toBe('selector-max-id'),
+    ));
 });
 
-const invalidNumberLeadingZoCSS = (
-  `.Block {
+const invalidNumberLeadingZoCSS = `.Block {
   height: 0.5em;
 }
-`);
+`;
 
 describe('flags number-leading-zero', () => {
   let result;
@@ -220,21 +212,18 @@ describe('flags number-leading-zero', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
-    expect(data.errored).toBeTruthy()
-  )));
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
 
-  it('raised one warning', () => result.then(data => (
-    expect(data.results[0].warnings.length).toBe(1)
-  )));
+  it('raised one warning', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
 
-  it('raised correct rule', () => result.then(data => (
-    expect(data.results[0].warnings[0].rule).toBe('number-leading-zero')
-  )));
+  it('raised correct rule', () =>
+    result.then(data =>
+      expect(data.results[0].warnings[0].rule).toBe('number-leading-zero'),
+    ));
 });
 
-const invalidPatternCSS = (
-  `$DollarVariable: 1rem;
+const invalidPatternCSS = `$DollarVariable: 1rem;
 
 %PlaceHolder {
   display: block;
@@ -263,7 +252,7 @@ const invalidPatternCSS = (
 .0class {
   display: block;
 }
-`);
+`;
 
 describe('flags pattern errors', () => {
   let result;
@@ -275,42 +264,64 @@ describe('flags pattern errors', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
-    expect(data.errored).toBeTruthy()
-  )));
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
 
-  it('raised correct number of warnings', () => result.then(data => (
-    expect(data.results[0].warnings.length).toBe(8)
-  )));
+  it('raised correct number of warnings', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(8)));
 
-  it('raised correct rules', () => result.then(data => (
-    expect(data.results[0].warnings).toEqual([
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'scss/at-mixin-pattern' }),
-      expect.objectContaining({ rule: 'scss/dollar-variable-pattern' }),
-      expect.objectContaining({ rule: 'scss/percent-placeholder-pattern' }),
-    ])
-  )));
+  it('raised correct rules', () =>
+    result.then(data =>
+      expect(data.results[0].warnings).toEqual([
+        expect.objectContaining({ rule: 'selector-class-pattern' }),
+        expect.objectContaining({ rule: 'selector-class-pattern' }),
+        expect.objectContaining({ rule: 'selector-class-pattern' }),
+        expect.objectContaining({ rule: 'selector-class-pattern' }),
+        expect.objectContaining({ rule: 'selector-class-pattern' }),
+        expect.objectContaining({ rule: 'scss/at-mixin-pattern' }),
+        expect.objectContaining({ rule: 'scss/dollar-variable-pattern' }),
+        expect.objectContaining({ rule: 'scss/percent-placeholder-pattern' }),
+      ]),
+    ));
 
-  it('produced correct message', () => result.then(data => (
-    expect(data.results[0].warnings).toEqual([
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)' }),
-      expect.objectContaining({ text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)' }),
-      expect.objectContaining({ text: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)' }),
-    ])
-  )));
+  it('produced correct message', () =>
+    result.then(data =>
+      expect(data.results[0].warnings).toEqual([
+        expect.objectContaining({
+          text:
+            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)',
+        }),
+        expect.objectContaining({
+          text:
+            'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)',
+        }),
+      ]),
+    ));
 });
-const invalidAtRules = (
-  `.AtRules {
+const invalidAtRules = `.AtRules {
   @if $display == 'block' {
     display: 'block';
   }
@@ -322,7 +333,7 @@ const invalidAtRules = (
     display: 'inline-block';
   }
 }
-`);
+`;
 
 describe('at rules errors', () => {
   let result;
@@ -334,21 +345,27 @@ describe('at rules errors', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
-    expect(data.errored).toBeTruthy()
-  )));
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
 
-  it('raised correct number of warnings', () => result.then(data => (
-    expect(data.results[0].warnings.length).toBe(5)
-  )));
+  it('raised correct number of warnings', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(5)));
 
-  it('raised correct rules', () => result.then(data => (
-    expect(data.results[0].warnings).toEqual([
-      expect.objectContaining({ rule: 'scss/at-else-closing-brace-newline-after' }),
-      expect.objectContaining({ rule: 'scss/at-else-closing-brace-space-after' }),
-      expect.objectContaining({ rule: 'scss/at-else-empty-line-before' }),
-      expect.objectContaining({ rule: 'scss/at-if-closing-brace-newline-after' }),
-      expect.objectContaining({ rule: 'scss/at-if-closing-brace-space-after' }),
-    ])
-  )));
+  it('raised correct rules', () =>
+    result.then(data =>
+      expect(data.results[0].warnings).toEqual([
+        expect.objectContaining({
+          rule: 'scss/at-else-closing-brace-newline-after',
+        }),
+        expect.objectContaining({
+          rule: 'scss/at-else-closing-brace-space-after',
+        }),
+        expect.objectContaining({ rule: 'scss/at-else-empty-line-before' }),
+        expect.objectContaining({
+          rule: 'scss/at-if-closing-brace-newline-after',
+        }),
+        expect.objectContaining({
+          rule: 'scss/at-if-closing-brace-space-after',
+        }),
+      ]),
+    ));
 });
