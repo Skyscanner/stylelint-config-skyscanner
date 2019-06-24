@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-skyscanner",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "Skyscanner's stylelint config.",
   "main": "index.js",
   "engines": {
@@ -17,7 +17,6 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "babel-eslint": "^8.0.1",
-    "ensure-node-env": "^1.0.4",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-skyscanner": "^3.0.0",
@@ -43,7 +42,7 @@
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "pretest": "ensure-node-env && npm run lint",
+    "pretest": "npm_config_registry=https://registry.npmjs.org/ npx ensure-node-env && npm run lint",
     "test": "jest"
   }
 }
