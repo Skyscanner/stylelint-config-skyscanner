@@ -29,7 +29,7 @@
     "stylelint": "^10.1.0"
   },
   "peerDependencies": {
-    "stylelint": "^9.1.1"
+    "stylelint": "^10.1.0"
   },
   "dependencies": {
     "stylelint-config-standard": "^18.3.0",
@@ -44,7 +44,7 @@
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "pretest": "npm_config_registry=https://registry.npmjs.org/ npx ensure-node-env && npm run lint",
+    "pretest": "npx ensure-node-env && npm run lint",
     "test": "jest"
   }
 }
