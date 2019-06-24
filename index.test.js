@@ -285,27 +285,27 @@ describe('flags pattern errors', () => {
 
   it('raised correct rules', () => result.then(data => (
     expect(data.results[0].warnings).toEqual([
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'selector-class-pattern' }),
-      expect.objectContaining({ rule: 'scss/at-mixin-pattern' }),
-      expect.objectContaining({ rule: 'scss/dollar-variable-pattern' }),
       expect.objectContaining({ rule: 'scss/percent-placeholder-pattern' }),
+      expect.objectContaining({ rule: 'scss/dollar-variable-pattern' }),
+      expect.objectContaining({ rule: 'scss/at-mixin-pattern' }),
+      expect.objectContaining({ rule: 'selector-class-pattern' }),
+      expect.objectContaining({ rule: 'selector-class-pattern' }),
+      expect.objectContaining({ rule: 'selector-class-pattern' }),
+      expect.objectContaining({ rule: 'selector-class-pattern' }),
+      expect.objectContaining({ rule: 'selector-class-pattern' }),
     ])
   )));
 
   it('produced correct message', () => result.then(data => (
     expect(data.results[0].warnings).toEqual([
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
-      expect.objectContaining({ text: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)' }),
-      expect.objectContaining({ text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)' }),
       expect.objectContaining({ text: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)' }),
+      expect.objectContaining({ text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)' }),
+      expect.objectContaining({ text: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)' }),
+      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
+      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
+      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
+      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
+      expect.objectContaining({ text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)' }),
     ])
   )));
 });
@@ -344,11 +344,11 @@ describe('at rules errors', () => {
 
   it('raised correct rules', () => result.then(data => (
     expect(data.results[0].warnings).toEqual([
-      expect.objectContaining({ rule: 'scss/at-else-closing-brace-newline-after' }),
-      expect.objectContaining({ rule: 'scss/at-else-closing-brace-space-after' }),
-      expect.objectContaining({ rule: 'scss/at-else-empty-line-before' }),
-      expect.objectContaining({ rule: 'scss/at-if-closing-brace-newline-after' }),
       expect.objectContaining({ rule: 'scss/at-if-closing-brace-space-after' }),
+      expect.objectContaining({ rule: 'scss/at-if-closing-brace-newline-after' }),
+      expect.objectContaining({ rule: 'scss/at-else-empty-line-before' }),
+      expect.objectContaining({ rule: 'scss/at-else-closing-brace-space-after' }),
+      expect.objectContaining({ rule: 'scss/at-else-closing-brace-newline-after' }),
     ])
   )));
 });
