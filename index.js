@@ -35,9 +35,9 @@ module.exports = {
     'number-leading-zero': 'never',
     'unit-blacklist': ['px'],
     'selector-class-pattern': [
-      `^(${pascalCase}|${kebabCase})` + // block
-        `(__(${camelCase}|${kebabCase}))?` + // element
-        `(--(${camelCase}|${kebabCase}))?$`, // modifier
+      `^(${pascalCase}|${kebabCase})` // block
+      + `(__(${camelCase}|${kebabCase}))?` // element
+      + `(--(${camelCase}|${kebabCase}))?$`, // modifier
       {
         resolveNestedSelectors: true,
         message: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
