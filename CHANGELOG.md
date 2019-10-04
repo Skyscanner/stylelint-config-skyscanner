@@ -3,6 +3,12 @@
 ## UNRELEASED
 
 _Nothing yet..._
+### HEAD:
+- Upgraded `stylelint` peerDependency to `^11.0.0`
+
+
+## 2.0.0-beta.3
+- Upgraded `stylelint` peerDependency to `^10.1.0`
 
 ## 2.0.0-beta.2
 ### Fixed
