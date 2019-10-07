@@ -3,6 +3,26 @@
 ## UNRELEASED
 
 _Nothing yet..._
+### HEAD:
+- Upgraded `stylelint` peerDependency to `^11.0.0`
+- Upgraded dependencies:
+  - `babel-eslint` to `^10.0.3`
+  - `eslint` to `^5.16.0`
+  - `eslint` to `^6.5.1`
+  - `eslint-config-airbnb` to `^17.1.0`
+  - `eslint-config-airbnb` to `^18.0.1`
+  - `eslint-plugin-import` to `^2.18.2`
+  - `eslint-plugin-jsx-a11y` to `^6.2.3`
+  - `eslint-plugin-react` to `^7.16.0`
+  - `jest` to `^24.9.0`
+  - `stylelint` to `^11.0.0`
+  - `stylelint-config-standard` to `^19.0.0`
+  - `stylelint-declaration-strict-value` to `^1.1.6`
+  - `stylelint-order` to `^3.1.1`
+  - `stylelint-scss` to `^3.11.1`
+
+## 2.0.0-beta.3
+- Upgraded `stylelint` peerDependency to `^10.1.0`
 
 ## 2.0.0-beta.2
 ### Fixed

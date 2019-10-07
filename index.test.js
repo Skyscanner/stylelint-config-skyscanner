@@ -166,11 +166,11 @@ describe('flags no warnings with valid css', () => {
     });
   });
 
-  it('did not error', () => result.then(data => (
+  it('did not error', () => result.then((data) => (
     expect(data.errored).toBeFalsy()
   )));
 
-  it('raised no warnings', () => result.then(data => (
+  it('raised no warnings', () => result.then((data) => (
     expect(data.results[0].warnings.length).toBe(0)
   )));
 });
@@ -191,15 +191,15 @@ describe('flags selector-max-id', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
+  it('did error', () => result.then((data) => (
     expect(data.errored).toBeTruthy()
   )));
 
-  it('raised one warning', () => result.then(data => (
+  it('raised one warning', () => result.then((data) => (
     expect(data.results[0].warnings.length).toBe(1)
   )));
 
-  it('raised correct rule', () => result.then(data => (
+  it('raised correct rule', () => result.then((data) => (
     expect(data.results[0].warnings[0].rule).toBe('selector-max-id')
   )));
 });
@@ -220,15 +220,15 @@ describe('flags number-leading-zero', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
+  it('did error', () => result.then((data) => (
     expect(data.errored).toBeTruthy()
   )));
 
-  it('raised one warning', () => result.then(data => (
+  it('raised one warning', () => result.then((data) => (
     expect(data.results[0].warnings.length).toBe(1)
   )));
 
-  it('raised correct rule', () => result.then(data => (
+  it('raised correct rule', () => result.then((data) => (
     expect(data.results[0].warnings[0].rule).toBe('number-leading-zero')
   )));
 });
@@ -275,15 +275,15 @@ describe('flags pattern errors', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
+  it('did error', () => result.then((data) => (
     expect(data.errored).toBeTruthy()
   )));
 
-  it('raised correct number of warnings', () => result.then(data => (
+  it('raised correct number of warnings', () => result.then((data) => (
     expect(data.results[0].warnings.length).toBe(8)
   )));
 
-  it('raised correct rules', () => result.then(data => (
+  it('raised correct rules', () => result.then((data) => (
     expect(data.results[0].warnings).toEqual([
       expect.objectContaining({ rule: 'scss/percent-placeholder-pattern' }),
       expect.objectContaining({ rule: 'scss/dollar-variable-pattern' }),
@@ -296,7 +296,7 @@ describe('flags pattern errors', () => {
     ])
   )));
 
-  it('produced correct message', () => result.then(data => (
+  it('produced correct message', () => result.then((data) => (
     expect(data.results[0].warnings).toEqual([
       expect.objectContaining({ text: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)' }),
       expect.objectContaining({ text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)' }),
@@ -334,20 +334,20 @@ describe('at rules errors', () => {
     });
   });
 
-  it('did error', () => result.then(data => (
+  it('did error', () => result.then((data) => (
     expect(data.errored).toBeTruthy()
   )));
 
-  it('raised correct number of warnings', () => result.then(data => (
+  it('raised correct number of warnings', () => result.then((data) => (
     expect(data.results[0].warnings.length).toBe(5)
   )));
 
-  it('raised correct rules', () => result.then(data => (
+  it('raised correct rules', () => result.then((data) => (
     expect(data.results[0].warnings).toEqual([
+      expect.objectContaining({ rule: 'scss/at-else-closing-brace-space-after' }),
       expect.objectContaining({ rule: 'scss/at-if-closing-brace-space-after' }),
       expect.objectContaining({ rule: 'scss/at-if-closing-brace-newline-after' }),
       expect.objectContaining({ rule: 'scss/at-else-empty-line-before' }),
-      expect.objectContaining({ rule: 'scss/at-else-closing-brace-space-after' }),
       expect.objectContaining({ rule: 'scss/at-else-closing-brace-newline-after' }),
     ])
   )));
