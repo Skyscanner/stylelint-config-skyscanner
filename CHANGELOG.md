@@ -3,7 +3,8 @@
 ## UNRELEASED
 
 _Nothing yet..._
-### HEAD:
+
+## 2.0.0-beta.4
 - Upgraded `stylelint` peerDependency to `^11.0.0`
 - Upgraded dependencies:
   - `babel-eslint` to `^10.0.3`
