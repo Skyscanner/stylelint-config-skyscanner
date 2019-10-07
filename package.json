@@ -13,7 +13,7 @@
     "javascript",
     "skyscanner"
   ],
-  "author": "Dan Ristea <dan.ristea@skyscanner.net>",
+  "author": "Backpack <backpack@skyscanner.net>",
   "license": "Apache-2.0",
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -23,9 +23,9 @@
     "eslint-plugin-backpack": "^0.2.3",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.15.1",
+    "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-skyscanner-dates": "^1.0.9",
-    "jest": "^22.4.0",
+    "jest": "^24.9.0",
     "stylelint": "^11.0.0"
   },
   "peerDependencies": {
