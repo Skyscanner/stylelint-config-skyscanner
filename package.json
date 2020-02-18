@@ -2,49 +2,62 @@
   "name": "stylelint-config-skyscanner",
   "version": "2.0.0-beta.4",
   "description": "Skyscanner's stylelint config.",
-  "main": "index.js",
+  "license": "Apache-2.0",
   "engines": {
-    "node": "^8.16.0",
-    "npm": "^6.4.1"
+    "node": "^12.13.0",
+    "npm": "^6.12.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skyscanner/stylelint-config-skyscanner"
+  },
+  "author": "Backpack Design System <backpack@skyscanner.net>",
   "keywords": [
     "stylelint",
     "scss",
     "javascript",
     "skyscanner"
   ],
-  "author": "Backpack <backpack@skyscanner.net>",
-  "license": "Apache-2.0",
-  "devDependencies": {
-    "babel-eslint": "^10.0.3",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-config-skyscanner": "^4.1.0",
-    "eslint-plugin-backpack": "^0.2.3",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-skyscanner-dates": "^1.0.9",
-    "jest": "^24.9.0",
-    "stylelint": "^11.0.0"
-  },
-  "peerDependencies": {
-    "stylelint": "^11.0.0"
-  },
-  "dependencies": {
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-declaration-strict-value": "^1.1.6",
-    "stylelint-order": "^3.1.1",
-    "stylelint-scss": "^3.11.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Skyscanner/stylelint-config-skyscanner"
-  },
+  "main": "index.js",
   "scripts": {
+    "format:packagejson": "format-package -w",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
-    "pretest": "npx ensure-node-env && npm run lint",
+    "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
+    "spellcheck:ci": "npm run spellcheck -- '**/*.md' '!LICENSE.md' '!**/node_modules/**/*.md'",
+    "pretest": "npx ensure-node-env",
     "test": "jest"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "!(LICENSE)*.md": [
+      "npm run spellcheck",
+      "prettier --write"
+    ],
+    "**/!(package|package-lock).json": "prettier --write",
+    "**/*.yml": "prettier --write",
+    "*.js": "npm run lint:fix",
+    "package.json": "npm run format:packagejson"
+  },
+  "dependencies": {
+    "stylelint": "^13.1.0",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-strict-value": "^1.1.8",
+    "stylelint-order": "^4.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.14.2"
+  },
+  "devDependencies": {
+    "eslint-config-skyscanner": "^5.0.0-beta.3",
+    "format-package": "^5.2.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "markdown-spellcheck": "^1.3.1"
   }
 }
