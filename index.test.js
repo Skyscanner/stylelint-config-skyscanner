@@ -66,6 +66,10 @@ const validCss = `$kebab-case-variable: 3rem;
       display: block;
     }
   }
+
+  [target='_blank'] {
+    text-decoration: underline;
+  }
 }
 
 .kebab-case-block {
