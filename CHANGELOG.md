@@ -11,7 +11,7 @@
 - Upgraded Node 8 (lts/carbon) to Node 12 (lts/erbium).
 - Moved `peerDependencies` into `dependencies`.
 - Upgraded dependencies:
-  - `stylelint` to `^13.1.0`.
+  - `stylelint` to `^13.2.0`.
   - `stylelint-config-standard` to `^20.0.0`.
   - `stylelint-order` to `^4.0.0`.
 

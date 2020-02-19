@@ -44,7 +44,7 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
-    "stylelint": "^13.1.0",
+    "stylelint": "^13.2.0",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-strict-value": "^1.1.8",
@@ -55,7 +55,7 @@
   "devDependencies": {
     "eslint-config-skyscanner": "^5.0.0-beta.3",
     "format-package": "^5.2.0",
-    "husky": "^4.2.1",
+    "husky": "^4.2.3",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
     "markdown-spellcheck": "^1.3.1"

@@ -54,7 +54,6 @@ module.exports = {
     'selector-no-vendor-prefix': true,
     'value-no-vendor-prefix': true,
     'string-quotes': 'single',
-    'selector-attribute-quotes': 'never',
     'font-family-name-quotes': 'always-where-recommended',
     'at-rule-empty-line-before': [
       'always',
@@ -108,7 +107,6 @@ module.exports = {
     ],
     'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/declaration-nested-properties-no-divided-groups': true,
-    'scss/operator-no-newline-after': true,
     'scss/operator-no-unspaced': true,
     'scss/selector-no-redundant-nesting-selector': true,
     'scss/at-else-closing-brace-newline-after': 'always-last-in-chain',
@@ -124,6 +122,7 @@ module.exports = {
           fill: ['currentColor', 'transparent', 'inherit'],
           stroke: ['currentColor', 'transparent', 'inherit'],
         },
+        disableFix: true,
       },
     ],
     'order/order': [
