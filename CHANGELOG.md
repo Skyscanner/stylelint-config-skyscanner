@@ -2,6 +2,8 @@
 
 ## UNRELEASED
 
+## 2.0.0 - Release - Added Prettier, upgrading dependencies and Node version.
+
 ### Added
 
 - Integrated [Prettier](https://prettier.io/). Please, note that `stylefmt` recommends using other tools to fix formatting issues (see [their readme](https://github.com/morishitter/stylefmt#notice-consider-other-tools-before-adopting-stylefmt)), as `stylelint` already added the `--fix` flag. It is recommended to use `stylelint --fix` to format the code (specially now that Prettier has been integrated).
