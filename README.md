@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/Skyscanner/stylelint-config-skyscanner.svg?branch=master)](https://travis-ci.org/Skyscanner/stylelint-config-skyscanner)
 [![npm version](https://img.shields.io/npm/v/stylelint-config-skyscanner.svg)](https://www.npmjs.com/package/stylelint-config-skyscanner)
-[![Greenkeeper badge](https://badges.greenkeeper.io/Skyscanner/stylelint-config-skyscanner.svg)](https://greenkeeper.io/)
+
 
 Skyscanner's stylelint config.
 
