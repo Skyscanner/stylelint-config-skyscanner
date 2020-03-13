@@ -44,7 +44,7 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
-    "stylelint": "^13.2.0",
+    "stylelint": "^13.2.1",
     "stylelint-config-prettier": "^8.0.1",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-declaration-strict-value": "^1.1.8",
