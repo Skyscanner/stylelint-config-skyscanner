@@ -2,6 +2,13 @@
 
 ## UNRELEASED
 
+### Changed
+
+- Upgraded dependencies:
+  - `stylelint` to `13.3.3`
+  - `stylelint-declaration-strict-value` to `1.4.3`
+  - `stylelint-scss` to `3.17.2`
+
 ## 2.0.0 - Release - Added Prettier, upgrading dependencies and Node version.
 
 ### Added

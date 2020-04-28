@@ -326,6 +326,7 @@ describe('flags pattern errors', () => {
       ]),
     ));
 });
+
 const invalidAtRules = `.AtRules {
   @if $display == 'block' {
     display: 'block';
