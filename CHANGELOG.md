@@ -2,6 +2,8 @@
 
 ## UNRELEASED
 
+## 2.1.0 - Upgrading dependencies
+
 ### Changed
 
 - Upgraded dependencies:
