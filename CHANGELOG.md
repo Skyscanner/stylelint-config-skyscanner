@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+# 2.2.0 - Adding prettier dependency
+
+- Added `prettier` as dependency
+
 ## 2.1.0 - Upgrading dependencies
 
 ### Changed
