@@ -52,7 +52,7 @@
     "stylelint-declaration-strict-value": "^1.5.0",
     "stylelint-order": "^4.1.0",
     "stylelint-prettier": "^1.1.2",
-    "stylelint-scss": "^3.17.2"
+    "stylelint-scss": "^3.18.0"
   },
   "devDependencies": {
     "eslint-config-skyscanner": "^6.0.0",
