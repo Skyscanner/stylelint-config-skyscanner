@@ -2,6 +2,13 @@
 
 ## UNRELEASED
 
+## 2.4.0 - Upgrading dependencies
+
+- Upgraded dependencies:
+  - `stylelint` to `13.6.1`
+  - `stylelint-config-prettier` to `8.0.2`
+  - `stylelint-scss` to `3.18.0`
+
 ## 2.3.0 - Upgrading dependencies
 
 - Upgraded dependencies:
