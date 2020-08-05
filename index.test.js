@@ -113,30 +113,30 @@ const validCss = `$kebab-case-variable: 3rem;
 }
 
 .LeadingZero {
-  padding: 0.5em;
+  padding: $bpk-spacing-xs;
 }
 
 .OrderCheck {
   @extend kebab-case-placeholder;
 
   position: static;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  top: $bpk-spacing-none;
+  right: $bpk-spacing-none;
+  bottom: $bpk-spacing-none;
+  left: $bpk-spacing-none;
   content: '';
   float: left;
   clear: left;
   display: inline;
   z-index: 1;
-  width: 4rem;
-  min-width: 1rem;
-  max-width: 1rem;
-  height: 1rem;
-  min-height: 1rem;
-  max-height: 1rem;
-  margin: 1rem;
-  padding: 1rem;
+  width: $bpk-spacing-sm;
+  min-width: $bpk-spacing-sm;
+  max-width: $bpk-spacing-sm;
+  height: $bpk-spacing-sm;
+  min-height: $bpk-spacing-sm;
+  max-height: $bpk-spacing-sm;
+  margin: $bpk-one-pixel-rem;
+  padding: $bpk-one-pixel-rem;
   color: transparent;
   fill: transparent;
   stroke: transparent;
@@ -202,8 +202,8 @@ describe('flags selector-max-id', () => {
     ));
 });
 
-const invalidNumberLeadingZoCSS = `.Block {
-  height: .5em;
+const invalidNumberLeadingZeroCSS = `.Block {
+  column-width: .5em;
 }
 `;
 
@@ -212,7 +212,7 @@ describe('flags number-leading-zero', () => {
 
   beforeEach(() => {
     result = stylelint.lint({
-      code: invalidNumberLeadingZoCSS,
+      code: invalidNumberLeadingZeroCSS,
       config,
     });
   });
@@ -225,6 +225,91 @@ describe('flags number-leading-zero', () => {
   it('raised correct rule', () =>
     result.then(data =>
       expect(data.results[0].warnings[0].rule).toBe('prettier/prettier'),
+    ));
+});
+
+const invalidBpkColorCSS = `.Block {
+  background-color: #fff;
+}
+`;
+
+describe('flags color issues', () => {
+  let result;
+
+  beforeEach(() => {
+    result = stylelint.lint({
+      code: invalidBpkColorCSS,
+      config,
+    });
+  });
+
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+
+  it('raised two warnings', () =>
+    result.then(data => {
+      expect(data.results[0].warnings.length).toBe(2);
+    }));
+
+  it('raised correct rule', () =>
+    result.then(data => {
+      expect(data.results[0].warnings[0].rule).toBe('backpack/use-colors');
+      expect(data.results[0].warnings[1].rule).toBe(
+        'scale-unlimited/declaration-strict-value',
+      );
+    }));
+});
+
+const invalidVarColorCSS = `$color-orange: orange;
+
+.Block {
+  background-color: $color-orange;
+}
+`;
+
+describe('flags color issue with var', () => {
+  let result;
+
+  beforeEach(() => {
+    result = stylelint.lint({
+      code: invalidVarColorCSS,
+      config,
+    });
+  });
+
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+
+  it('raised one warning', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
+
+  it('raised correct rule', () =>
+    result.then(data => {
+      expect(data.results[0].warnings[0].rule).toBe('backpack/use-colors');
+    }));
+});
+
+const invalidTokenCSS = `.Block {
+  width: 1rem;
+}
+`;
+
+describe('flags no bpk token', () => {
+  let result;
+
+  beforeEach(() => {
+    result = stylelint.lint({
+      code: invalidTokenCSS,
+      config,
+    });
+  });
+
+  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+
+  it('raised one warning', () =>
+    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
+
+  it('raised correct rule', () =>
+    result.then(data =>
+      expect(data.results[0].warnings[0].rule).toBe('backpack/use-tokens'),
     ));
 });
 
