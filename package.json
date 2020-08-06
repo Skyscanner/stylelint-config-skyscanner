@@ -44,7 +44,7 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
-    "@skyscanner/stylelint-plugin-backpack": "0.0.1",
+    "@skyscanner/stylelint-plugin-backpack": "^1.1.0",
     "prettier": "^1.19.1",
     "stylelint": "^13.6.1",
     "stylelint-config-prettier": "^8.0.2",

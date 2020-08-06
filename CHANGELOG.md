@@ -2,6 +2,12 @@
 
 ## UNRELEASED
 
+### Added
+
+- Upgraded dependency:
+  - `stylelint-plugin-backpack` to `1.1.0`
+    - Adds new `backpack/use-colors` and `backpack/use-tokens` rules
+
 ## 2.4.0 - Upgrading dependencies
 
 - Upgraded dependencies:
