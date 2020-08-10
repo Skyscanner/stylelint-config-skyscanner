@@ -55,7 +55,7 @@
     "stylelint-scss": "^3.18.0"
   },
   "devDependencies": {
-    "eslint-config-skyscanner": "^6.0.0",
+    "eslint-config-skyscanner": "^7.0.0",
     "format-package": "^5.2.0",
     "husky": "^4.2.5",
     "jest": "^25.5.4",
