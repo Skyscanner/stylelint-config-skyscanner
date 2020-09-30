@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/Skyscanner/stylelint-config-skyscanner.svg?branch=master)](https://travis-ci.org/Skyscanner/stylelint-config-skyscanner)
 [![npm version](https://img.shields.io/npm/v/stylelint-config-skyscanner.svg)](https://www.npmjs.com/package/stylelint-config-skyscanner)
 
-
 Skyscanner's stylelint config.
 
 This stylelint config is based on [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard) with Skyscanner specific additions and is meant to be used with Backpack and `backpack-react-scripts`. Rules encourage developers to leverage the Backpack design system and to outsource development dependencies to `backpack-react-scripts`.
@@ -119,7 +118,7 @@ Avoid declaring your own `font-size` and `line-height`, use [`bpk-text-<size>` m
 
 Avoid declaring your own colours, use [`bpk-color-<color>` SCSS variables from Backpack](http://backpack.prod.aws.skyscnr.com/components/bonds/colors) instead.
 
-Rules: `unit-blacklist`, `scale-unlimited/declaration-strict-value`
+Rules: `unit-disallowed-list`, `scale-unlimited/declaration-strict-value`
 
 ## License
 

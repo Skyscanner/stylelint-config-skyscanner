@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+### Changed
+
+- Replace `unit-blacklist` with `unit-disallowed-list`. `unit-blacklist` was deprecated in [stylelint v13.7.0](https://github.com/stylelint/stylelint/blob/13.7.0/CHANGELOG.md#1370).
+
 ### Added
 
 - Upgraded dependency:
