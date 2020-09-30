@@ -40,7 +40,7 @@ module.exports = {
     ],
     'selector-max-compound-selectors': 2,
     'declaration-no-important': true,
-    'unit-blacklist': ['px'],
+    'unit-disallowed-list': ['px'],
     'selector-class-pattern': [
       `^(${pascalCase}|${kebabCase})` + // block
       `(__(${camelCase}|${kebabCase}))?` + // element
