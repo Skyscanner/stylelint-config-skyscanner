@@ -2,6 +2,8 @@
 
 ## UNRELEASED
 
+## 3.0.0 - Rule update and new linter updates.
+
 ### Breaking
 
 - Replace `unit-blacklist` with `unit-disallowed-list`. `unit-blacklist` was deprecated in [stylelint v13.7.0](https://github.com/stylelint/stylelint/blob/13.7.0/CHANGELOG.md#1370).

@@ -9,6 +9,7 @@ camelCase
 config
 eslint
 lts
+linter
 mixin
 mixins
 PascalCase
