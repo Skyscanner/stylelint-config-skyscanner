@@ -2,7 +2,7 @@
 
 ## UNRELEASED
 
-### Changed
+### Breaking
 
 - Replace `unit-blacklist` with `unit-disallowed-list`. `unit-blacklist` was deprecated in [stylelint v13.7.0](https://github.com/stylelint/stylelint/blob/13.7.0/CHANGELOG.md#1370).
 
@@ -11,6 +11,7 @@
 - Upgraded dependency:
   - `stylelint-plugin-backpack` to `1.1.0`
     - Adds new `backpack/use-colors` and `backpack/use-tokens` rules
+  - `eslint-config-skyscanner` to `8.0.0`
 
 ## 2.4.0 - Upgrading dependencies
 
