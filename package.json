@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@skyscanner/stylelint-plugin-backpack": "^1.1.0",
-    "prettier": "^1.19.1",
+    "eslint-config-skyscanner": "^8.0.0",
     "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
@@ -55,8 +55,7 @@
     "stylelint-scss": "^3.18.0"
   },
   "devDependencies": {
-    "eslint-config-skyscanner": "^8.0.0",
-    "format-package": "^5.2.0",
+    "format-package": "^6.1.0",
     "husky": "^4.3.0",
     "jest": "^26.5.3",
     "lint-staged": "^10.4.0",
