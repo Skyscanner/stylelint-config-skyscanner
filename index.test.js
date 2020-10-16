@@ -170,10 +170,10 @@ describe('flags no warnings with valid css', () => {
   });
 
   it('did not error', () =>
-    result.then(data => expect(data.errored).toBeFalsy()));
+    result.then((data) => expect(data.errored).toBeFalsy()));
 
   it('raised no warnings', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(0)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(0)));
 });
 
 const invalidSelectorNoIdCSS = `#invalid-id {
@@ -191,13 +191,14 @@ describe('flags selector-max-id', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised one warning', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(1)));
 
   it('raised correct rule', () =>
-    result.then(data =>
+    result.then((data) =>
       expect(data.results[0].warnings[0].rule).toBe('selector-max-id'),
     ));
 });
@@ -217,13 +218,14 @@ describe('flags number-leading-zero', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised one warning', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(1)));
 
   it('raised correct rule', () =>
-    result.then(data =>
+    result.then((data) =>
       expect(data.results[0].warnings[0].rule).toBe('prettier/prettier'),
     ));
 });
@@ -243,15 +245,16 @@ describe('flags color issues', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised two warnings', () =>
-    result.then(data => {
+    result.then((data) => {
       expect(data.results[0].warnings.length).toBe(2);
     }));
 
   it('raised correct rule', () =>
-    result.then(data => {
+    result.then((data) => {
       expect(data.results[0].warnings[0].rule).toBe('backpack/use-colors');
       expect(data.results[0].warnings[1].rule).toBe(
         'scale-unlimited/declaration-strict-value',
@@ -276,13 +279,14 @@ describe('flags color issue with var', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised one warning', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(1)));
 
   it('raised correct rule', () =>
-    result.then(data => {
+    result.then((data) => {
       expect(data.results[0].warnings[0].rule).toBe('backpack/use-colors');
     }));
 });
@@ -302,13 +306,14 @@ describe('flags no bpk token', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised one warning', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(1)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(1)));
 
   it('raised correct rule', () =>
-    result.then(data =>
+    result.then((data) =>
       expect(data.results[0].warnings[0].rule).toBe('backpack/use-tokens'),
     ));
 });
@@ -354,13 +359,14 @@ describe('flags pattern errors', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised correct number of warnings', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(8)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(8)));
 
   it('raised correct rules', () =>
-    result.then(data =>
+    result.then((data) =>
       expect(data.results[0].warnings).toEqual([
         expect.objectContaining({ rule: 'scss/at-mixin-pattern' }),
         expect.objectContaining({ rule: 'scss/dollar-variable-pattern' }),
@@ -374,7 +380,7 @@ describe('flags pattern errors', () => {
     ));
 
   it('produced correct message', () =>
-    result.then(data =>
+    result.then((data) =>
       expect(data.results[0].warnings).toEqual([
         expect.objectContaining({
           text:
@@ -436,13 +442,14 @@ describe('at rules errors', () => {
     });
   });
 
-  it('did error', () => result.then(data => expect(data.errored).toBeTruthy()));
+  it('did error', () =>
+    result.then((data) => expect(data.errored).toBeTruthy()));
 
   it('raised correct number of warnings', () =>
-    result.then(data => expect(data.results[0].warnings.length).toBe(7)));
+    result.then((data) => expect(data.results[0].warnings.length).toBe(7)));
 
   it('raised correct rules', () =>
-    result.then(data =>
+    result.then((data) =>
       expect(data.results[0].warnings).toEqual([
         expect.objectContaining({
           rule: 'prettier/prettier',

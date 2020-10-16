@@ -43,7 +43,7 @@ module.exports = {
     'unit-disallowed-list': ['px'],
     'selector-class-pattern': [
       `^(${pascalCase}|${kebabCase})` + // block
-      `(__(${camelCase}|${kebabCase}))?` + // element
+        `(__(${camelCase}|${kebabCase}))?` + // element
         `(--(${camelCase}|${kebabCase}))?$`, // modifier
       {
         resolveNestedSelectors: true,
