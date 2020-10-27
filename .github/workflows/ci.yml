@@ -1,0 +1,25 @@
+name: ESLint Plugin Backpack CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Run linters
+        run: npm run lint
+
+      - name: Test
+        run: npm test
+
+      - name: Spellcheck
+        run: npm run spellcheck:ci
