@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [master]
 
+defaults:
+  run:
+    shell: bash -l {0}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +23,9 @@ jobs:
         run: npm run lint
 
       - name: Test
-        run: npm test
+        run: |
+          nvm use 
+          npm test
 
       - name: Spellcheck
         run: npm run spellcheck:ci
