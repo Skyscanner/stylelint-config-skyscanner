@@ -2,7 +2,7 @@
 
 ## UNRELEASED
 
-## - Upgrade Backpack dependency
+## 3.0.1 - Upgrade Backpack dependency
 
 - Upgraded `stylelint-plugin-backpack` to latest version that includes a fix for linting multiples of tokens.
 
