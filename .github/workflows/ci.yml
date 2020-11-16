@@ -16,6 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: nvm install
+        run: nvm install
+
       - name: Install deps
         run: npm ci
 
