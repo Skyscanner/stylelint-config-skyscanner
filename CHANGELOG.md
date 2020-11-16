@@ -2,6 +2,14 @@
 
 ## UNRELEASED
 
+## 3.0.1 - Linter update
+
+### Added
+
+- Upgraded dependency:
+  - `stylelint-plugin-backpack` to `1.1.1`
+    - Fix bug in `backpack/use-tokens` rule where multiplications of tokens threw errors instead of passing.
+
 ## 3.0.0 - Rule update and new linter updates.
 
 ### Breaking
@@ -146,8 +154,6 @@
 - `at-rule-no-vendor-prefix`, `media-feature-name-no-vendor-prefix`, `property-no-vendor-prefix`, `selector-no-vendor-prefix`, `value-no-vendor-prefix` to encourage Autoprefixer usage
 - `string-quotes`, `selector-attribute-quotes`, `font-family-name-quotes` to standardise string usage
 - `unspecified: 'bottomAlphabetical'` to `order/properties-order` rule
-
-+
 
 ## 0.1.2
 
