@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+## 3.0.2 - Upgrade Backpack dependency
+
+- Upgraded `stylelint-plugin-backpack` to latest version.
+
 ## 3.0.1 - Upgrade Backpack dependency
 
 - Upgraded `stylelint-plugin-backpack` to latest version that includes a fix for linting multiples of tokens.
@@ -151,7 +155,7 @@
 - `string-quotes`, `selector-attribute-quotes`, `font-family-name-quotes` to standardise string usage
 - `unspecified: 'bottomAlphabetical'` to `order/properties-order` rule
 
-+
+*
 
 ## 0.1.2
 
