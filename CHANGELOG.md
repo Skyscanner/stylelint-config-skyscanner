@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+## 3.0.3 - Upgrade Backpack dependency
+
+- Upgraded `stylelint-plugin-backpack` to latest version
+
 ## 3.0.2 - Upgrade Backpack dependency
 
 - Upgraded `stylelint-plugin-backpack` to latest version.
