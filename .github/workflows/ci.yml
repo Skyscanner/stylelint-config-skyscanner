@@ -1,10 +1,10 @@
-name: ESLint Plugin Backpack CI
+name: Stylelint Config Skyscanner CI
 
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
-    branches: [master]
+    branches: [main]
 
 defaults:
   run:
