@@ -1,6 +1,6 @@
 # stylelint-config-skyscanner
 
-[![Build Status](https://travis-ci.org/Skyscanner/stylelint-config-skyscanner.svg?branch=master)](https://travis-ci.org/Skyscanner/stylelint-config-skyscanner)
+[![Build Status](https://github.com/Skyscanner/stylelint-config-skyscanner/workflows/Stylelint%20Config%20Skyscanner%20CI/badge.svg)](https://github.com/Skyscanner/stylelint-config-skyscanner/actions)
 [![npm version](https://img.shields.io/npm/v/stylelint-config-skyscanner.svg)](https://www.npmjs.com/package/stylelint-config-skyscanner)
 
 Skyscanner's stylelint config.
