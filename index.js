@@ -27,8 +27,9 @@ module.exports = {
     'stylelint-prettier',
   ],
   rules: {
-    'backpack/use-colors': true,
-    'backpack/use-tokens': true,
+    // Disabling as false positive issues are being raised in stylelint-plugin-backpack
+    // 'backpack/use-colors': true,
+    // 'backpack/use-tokens': true,
     'prettier/prettier': true,
     'selector-max-id': 0,
     'selector-max-type': [

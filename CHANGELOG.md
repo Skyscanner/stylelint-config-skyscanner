@@ -2,6 +2,10 @@
 
 ## UNRELEASED
 
+## Fixed - Disable Backpack linter
+
+- Temporarily disabled Backpack due to false positive reports.
+
 ## 3.0.3 - Upgrade Backpack dependency
 
 - Upgraded `stylelint-plugin-backpack` to latest version
