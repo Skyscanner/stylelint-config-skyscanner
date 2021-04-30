@@ -6,8 +6,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Breaking
 
-- Upgraded `eslint-config-skyscanner` from `8.1.0` to `9.0.0`
-  - Brings the following breaking changes: [`eslint-config-skyscanner` CHANGELOG](https://github.com/Skyscanner/eslint-config-skyscanner/blob/main/CHANGELOG.md#900---updating-dependencies) 
+- Upgraded `eslint-config-skyscanner` from `8.1.0` to `9.0.1`
+  - Brings the following breaking changes: [`eslint-config-skyscanner` CHANGELOG](https://github.com/Skyscanner/eslint-config-skyscanner/blob/main/CHANGELOG.md#900---updating-dependencies)
 
 ### Patched
 
