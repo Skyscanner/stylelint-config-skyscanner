@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@skyscanner/stylelint-plugin-backpack": "^1.1.3",
-    "eslint-config-skyscanner": "^9.0.1",
+    "eslint-config-skyscanner": "^10.0.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
