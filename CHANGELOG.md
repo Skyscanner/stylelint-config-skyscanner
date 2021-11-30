@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+- Removed `eslint-config-skyscanner` from dependencies, and moved to devDependencies.
+
 ## 4.0.0
 
 ### Breaking
