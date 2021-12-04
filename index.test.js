@@ -382,9 +382,6 @@ describe('at rules errors', () => {
         expect.objectContaining({
           rule: 'scss/at-if-closing-brace-space-after',
         }),
-        // expect.objectContaining({
-        //   rule: 'function-calc-no-invalid',
-        // }),
       ]),
     ));
 });
