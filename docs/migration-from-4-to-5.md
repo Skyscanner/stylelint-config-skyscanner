@@ -1,4 +1,4 @@
-# Migration Guide from v4.x to v5.x
+# Migration Guide from `v4` to `v5`
 
 The main change here is the upgrade from `stylelint` `v13` to `v14`, and therefore bumping all dependencies to `v14` compatible versions.
 
@@ -12,7 +12,7 @@ As a reminder, `stylelint` should *not* be installed directly in your repository
 
 Stylelint `v14` comes with it's own [migration guide](https://github.com/stylelint/stylelint/blob/14.0.0/docs/migration-guide/to-14.md).
 
-The other packages also add or update several rules. These will not be granularly listed here unless they are unusual enough to mention, but expect new failures. Many will be autofixable using `--fix`, but others will require code changes.
+The other packages also add or update several rules. These will not be granularly listed here unless they are unusual enough to mention, but expect new failures. Many will be auto-fixable using `--fix`, but others will require code changes.
 
 The main points that may affect `stylelint-config-skyscanner` consumers are:
 
@@ -73,4 +73,4 @@ This could look like:
 ```
 ### `eslint-config-skyscanner` and `prettier`
 
-The upgrade of `eslint-config-skyscanner` to `v10` includes a minor version of prettier. This may introduce `prettier` errors in JavaScript files. These are typically autofixable using `--fix` on your `eslint` command.
+The upgrade of `eslint-config-skyscanner` to `v10` includes a minor version of prettier. This may introduce `prettier` errors in JavaScript files. These are typically auto-fixable using `--fix` on your `eslint` command.
