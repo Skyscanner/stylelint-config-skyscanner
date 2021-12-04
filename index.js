@@ -295,5 +295,7 @@ module.exports = {
         unspecified: 'bottomAlphabetical',
       },
     ],
+    'color-function-notation': 'legacy',
+    'alpha-value-notation': 'number',
   },
 };
