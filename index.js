@@ -18,18 +18,18 @@ const kebabCase = '([a-z][a-z0-9]*(-[a-z0-9]+)*)'; // kebab-case
 const camelCase = '([a-z0-9]+([A-Z][a-z0-9]+)*)'; // camelCase
 
 module.exports = {
-  extends: ['stylelint-config-standard', 'stylelint-prettier/recommended'],
+  extends: [
+    // 'stylelint-config-standard',
+    'stylelint-config-standard-scss',
+    'stylelint-prettier/recommended',
+  ],
   plugins: [
-    '@skyscanner/stylelint-plugin-backpack',
     'stylelint-scss',
     'stylelint-declaration-strict-value',
     'stylelint-order',
     'stylelint-prettier',
   ],
   rules: {
-    // Disabling as false positive issues are being raised in stylelint-plugin-backpack
-    // 'backpack/use-colors': true,
-    // 'backpack/use-tokens': true,
     'prettier/prettier': true,
     'selector-max-id': 0,
     'selector-max-type': [
