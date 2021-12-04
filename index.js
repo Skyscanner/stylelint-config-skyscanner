@@ -18,11 +18,7 @@ const kebabCase = '([a-z][a-z0-9]*(-[a-z0-9]+)*)'; // kebab-case
 const camelCase = '([a-z0-9]+([A-Z][a-z0-9]+)*)'; // camelCase
 
 module.exports = {
-  extends: [
-    // 'stylelint-config-standard',
-    'stylelint-config-standard-scss',
-    'stylelint-prettier/recommended',
-  ],
+  extends: ['stylelint-config-standard-scss', 'stylelint-prettier/recommended'],
   plugins: [
     'stylelint-scss',
     'stylelint-declaration-strict-value',
