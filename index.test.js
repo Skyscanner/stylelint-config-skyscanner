@@ -295,36 +295,28 @@ describe('flags pattern errors', () => {
     result.then((data) =>
       expect(data.results[0].warnings).toEqual([
         expect.objectContaining({
-          text:
-            'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)',
+          text: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)',
+          text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)',
+          text: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
       ]),
     ));
