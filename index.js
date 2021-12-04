@@ -118,6 +118,7 @@ module.exports = {
     'scss/at-else-empty-line-before': 'never',
     'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
     'scss/at-if-closing-brace-space-after': 'always-intermediate',
+    'scss/at-import-partial-extension': 'always',
     'scale-unlimited/declaration-strict-value': [
       ['/color/', 'fill', 'stroke', 'font-size', 'line-height'],
       {
