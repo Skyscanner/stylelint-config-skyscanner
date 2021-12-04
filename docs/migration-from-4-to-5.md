@@ -4,7 +4,7 @@ The main change here is the upgrade from `stylelint` `v13` to `v14`, and therefo
 
 ## Installation
 
-NPM can be a bit funny about installs sometimes. It is recommended to reinstall `eslint-config-skyscanner` after this upgrade to ensure their shared dependencies are resolved correctly.
+NPM can be a bit funny about installs sometimes. If you are also using `eslint-config-skyscanner` it is recommended to reinstall `eslint-config-skyscanner` after this upgrade to ensure their shared dependencies are resolved correctly.
 
 As a reminder, `stylelint` should *not* be installed directly in your repository, this is provided directly by `stylelint-config-skyscanner` and should be uninstalled first if you still have it installed.
 
@@ -71,3 +71,6 @@ This could look like:
   background: $bpk-color-nara;
 }
 ```
+### `eslint-config-skyscanner` and `prettier`
+
+The upgrade of `eslint-config-skyscanner` to `v10` includes a minor version of prettier. This may introduce `prettier` errors in JavaScript files. These are typically autofixable using `--fix` on your `eslint` command.
