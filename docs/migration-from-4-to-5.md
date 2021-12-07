@@ -6,9 +6,11 @@ There are two main changes:
 
 ## Installation
 
+First uninstall `stylelint-config-skyscanner`, then install `@skyscanner/stylelint-config-skyscanner`.
+
 NPM can be a bit funny about installs sometimes. If you are also using `eslint-config-skyscanner` it is recommended to reinstall `eslint-config-skyscanner` after this upgrade to ensure their shared dependencies are resolved correctly.
 
-As a reminder, `stylelint` should *not* be installed directly in your repository, this is provided directly by `stylelint-config-skyscanner` and should be uninstalled first if you still have it installed.
+As a reminder, `stylelint` should *not* be installed directly in your repository, this is provided directly by `@skyscanner/stylelint-config-skyscanner` and should be uninstalled first if you still have it installed.
 
 ## Breaking Changes
 
