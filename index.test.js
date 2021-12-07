@@ -117,7 +117,7 @@ const validCss = `$kebab-case-variable: 3rem;
 }
 
 .OrderCheck {
-  @extend kebab-case-placeholder;
+  @extend %kebab-case-placeholder;
 
   position: static;
   top: $bpk-spacing-none;
@@ -230,100 +230,6 @@ describe('flags number-leading-zero', () => {
     ));
 });
 
-const invalidBpkColorCSS = `.Block {
-  background-color: #fff;
-}
-`;
-
-// TODO: Re instate once stylelint-plugin-backpack resolved
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('flags color issues', () => {
-  let result;
-
-  beforeEach(() => {
-    result = stylelint.lint({
-      code: invalidBpkColorCSS,
-      config,
-    });
-  });
-
-  it('did error', () =>
-    result.then((data) => expect(data.errored).toBeTruthy()));
-
-  it('raised two warnings', () =>
-    result.then((data) => {
-      expect(data.results[0].warnings.length).toBe(2);
-    }));
-
-  it('raised correct rule', () =>
-    result.then((data) => {
-      expect(data.results[0].warnings[0].rule).toBe('backpack/use-colors');
-      expect(data.results[0].warnings[1].rule).toBe(
-        'scale-unlimited/declaration-strict-value',
-      );
-    }));
-});
-
-const invalidVarColorCSS = `$color-orange: orange;
-
-.Block {
-  background-color: $color-orange;
-}
-`;
-
-// TODO: Re instate once stylelint-plugin-backpack resolved
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('flags color issue with var', () => {
-  let result;
-
-  beforeEach(() => {
-    result = stylelint.lint({
-      code: invalidVarColorCSS,
-      config,
-    });
-  });
-
-  it('did error', () =>
-    result.then((data) => expect(data.errored).toBeTruthy()));
-
-  it('raised one warning', () =>
-    result.then((data) => expect(data.results[0].warnings.length).toBe(1)));
-
-  it('raised correct rule', () =>
-    result.then((data) => {
-      expect(data.results[0].warnings[0].rule).toBe('backpack/use-colors');
-    }));
-});
-
-const invalidTokenCSS = `.Block {
-  width: 1rem;
-}
-`;
-
-// TODO: Re instate once stylelint-plugin-backpack resolved
-// eslint-disable-next-line jest/no-disabled-tests
-describe.skip('flags no bpk token', () => {
-  let result;
-
-  beforeEach(() => {
-    result = stylelint.lint({
-      code: invalidTokenCSS,
-      config,
-    });
-  });
-
-  it('did error', () =>
-    result.then((data) => expect(data.errored).toBeTruthy()));
-
-  it('raised one warning', () =>
-    result.then((data) => expect(data.results[0].warnings.length).toBe(1)));
-
-  it('raised correct rule', () =>
-    result.then((data) =>
-      expect(data.results[0].warnings[0].rule).toBe('backpack/use-tokens'),
-    ));
-});
-
 const invalidPatternCSS = `$DollarVariable: 1rem;
 
 %PlaceHolder {
@@ -389,36 +295,28 @@ describe('flags pattern errors', () => {
     result.then((data) =>
       expect(data.results[0].warnings).toEqual([
         expect.objectContaining({
-          text:
-            'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)',
+          text: 'Expected mixin to be kebab-case with BEM variants allowed, see https://github.com/Skyscanner/stylelint-config-skyscanner#mixin-pattern for pattern (scss/at-mixin-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)',
+          text: 'Expected $ variable to be kebab-case (scss/dollar-variable-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)',
+          text: 'Expected %-placeholder to be kebab-case (scss/percent-placeholder-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
         expect.objectContaining({
-          text:
-            'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
+          text: 'Expect class selector to conform to BEM, see https://github.com/Skyscanner/stylelint-config-skyscanner#class-selector-pattern for pattern (selector-class-pattern)',
         }),
       ]),
     ));
