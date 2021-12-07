@@ -4,7 +4,11 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 # Breaking:
 
-The major change here is updating Stylelint to `v14`, resulting in a major version update of this package from `v4` to `v5`. A [migration guide](./docs/migration-from-4-to-5.md) has been added.
+There are two main changes:
+- Published under the `@skyscanner/` scope
+- Upgrade from `stylelint` `v13` to `v14`, and therefore bumping all dependencies to `v14` compatible versions.
+
+A [migration guide](./docs/migration-from-4-to-5.md) has been added.
 
 - Bump `stylelint` from `13.13.1` to `14.1.0`
 - Bump `stylelint-config-prettier` from `8.0.2` to `9.0.3`
