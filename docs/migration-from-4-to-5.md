@@ -1,6 +1,8 @@
 # Migration Guide from `v4` to `v5`
 
-The main change here is the upgrade from `stylelint` `v13` to `v14`, and therefore bumping all dependencies to `v14` compatible versions.
+There are two main changes:
+- Published under the `@skyscanner/` scope
+- Upgrade from `stylelint` `v13` to `v14`, and therefore bumping all dependencies to `v14` compatible versions.
 
 ## Installation
 
@@ -74,3 +76,17 @@ This could look like:
 ### `eslint-config-skyscanner` and `prettier`
 
 The upgrade of `eslint-config-skyscanner` to `v10` includes a minor version of prettier. This may introduce `prettier` errors in JavaScript files. These are typically auto-fixable using `--fix` on your `eslint` command.
+
+### Change to `@skyscanner/` scope
+
+This will mean your `stylelintrc.js` will need to update from:
+
+```js
+"extends": "stylelint-config-skyscanner"
+```
+
+to
+
+```js
+"extends": "@skyscanner/stylelint-config-skyscanner"
+```
