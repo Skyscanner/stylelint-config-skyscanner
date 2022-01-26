@@ -1,7 +1,12 @@
 {
-  "extends": "skyscanner",
+  "extends": "@skyscanner/skyscanner",
   "env": {
     "node": true,
     "jest": true
+  },
+  "settings": {
+    "react": {
+      "version": "16.4"
+    }
   }
 }
