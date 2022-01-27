@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+## 5.2.0
+
+### Updated
+
+- Bump stylelint from 14.2.0 to 14.3.0
+- Migrate from `eslint-config-skyscanner` to `@skyscanner/eslint-config-skyscanner`
+- Bump lint-staged from 12.1.4 to 12.1.7
+- Bump jest from 27.4.5 to 27.4.7
+
 ## 5.1.0
 
 ### Updated
