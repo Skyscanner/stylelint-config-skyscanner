@@ -37,6 +37,7 @@ const validCss = `$kebab-case-variable: 3rem;
 
   &--camelCaseModifier {
     display: block;
+    color: currentcolor;
   }
 
   &__camelCaseElement {

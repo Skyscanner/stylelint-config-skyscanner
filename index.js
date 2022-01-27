@@ -119,9 +119,9 @@ module.exports = {
       ['/color/', 'fill', 'stroke', 'font-size', 'line-height'],
       {
         ignoreKeywords: {
-          '/color/': ['currentColor', 'transparent', 'inherit'],
-          fill: ['currentColor', 'transparent', 'inherit'],
-          stroke: ['currentColor', 'transparent', 'inherit'],
+          '/color/': ['currentcolor', 'currentColor', 'transparent', 'inherit'],
+          fill: ['currentcolor', 'currentColor', 'transparent', 'inherit'],
+          stroke: ['currentcolor', 'currentColor', 'transparent', 'inherit'],
         },
         disableFix: true,
       },
