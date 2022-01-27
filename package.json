@@ -44,7 +44,7 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
-    "eslint-config-skyscanner": "^10.2.0",
+    "@skyscanner/eslint-config-skyscanner": "^11.0.0",
     "stylelint": "^14.3.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
