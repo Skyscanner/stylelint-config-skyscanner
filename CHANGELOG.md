@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+## 5.3.0
+
+### Updated
+
+- Allow using `currentcolor` keyword.
+
 ## 5.2.0
 
 ### Updated
