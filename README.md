@@ -10,7 +10,7 @@ This stylelint config is based on [`stylelint-config-standard`](https://github.c
 ## Installation
 
 ```bash
-npm install --save-dev stylelint-config-skyscanner
+npm install --save-dev @skyscanner/stylelint-config-skyscanner
 ```
 
 ## Usage
