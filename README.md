@@ -15,7 +15,7 @@ npm install --save-dev stylelint-config-skyscanner
 
 ## Usage
 
-Add `"extends": "stylelint-config-skyscanner"` to your `.stylelintrc`.
+Add `"extends": "@skyscanner/stylelint-config-skyscanner"` to your `.stylelintrc`.
 
 ## Styleguide
 
