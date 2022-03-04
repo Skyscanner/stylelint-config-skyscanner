@@ -103,7 +103,7 @@ Put mixins without a body above mixins with a body. The rules inside mixins with
 
 Nest `@media` rules inside the block they modify to keep all styles that affect an element together. Keep `@media` rules at the bottom of the page as inside them all other rules may be overwritten.
 
-Use mixins whenever a media rule repeats itself for easier maintenance. Use the [media query mixins in Backpack](http://backpack.prod.aws.skyscnr.com/sassdoc/#breakpoints) whenever possible.
+Use mixins whenever a media rule repeats itself for easier maintenance. Use the [media query mixins in Backpack](https://backpack.github.io/sassdoc/#breakpoints) whenever possible.
 
 ### Quotes
 
@@ -114,9 +114,9 @@ Rules: `string-quotes`, `selector-attribute-quotes`, `font-family-name-quotes`
 
 Avoid using `px` values, use `rem` for better scaling.
 
-Avoid declaring your own `font-size` and `line-height`, use [`bpk-text-<size>` mixins from Backpack](http://backpack.prod.aws.skyscnr.com/sassdoc/#typography) instead.
+Avoid declaring your own `font-size`, `line-height`, `font-weight`, `letter-spacing` or `font`. Use typography mixins from Backpack](https://backpack.github.io/sassdoc/#typography) instead.
 
-Avoid declaring your own colours, use [`bpk-color-<color>` SCSS variables from Backpack](http://backpack.prod.aws.skyscnr.com/components/bonds/colors) instead.
+Avoid declaring your own colours, use [`bpk-color-<color>` SCSS variables from Backpack](https://backpack.github.io/sassdoc/#colors-variable) instead.
 
 Rules: `unit-disallowed-list`, `scale-unlimited/declaration-strict-value`
 
