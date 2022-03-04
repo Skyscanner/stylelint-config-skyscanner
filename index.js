@@ -27,9 +27,12 @@ module.exports = {
     'stylelint-prettier',
   ],
   rules: {
-    'backpack/use-typography-styles': [true, {
-      'severity': 'warning'
-    }],
+    'backpack/use-typography-styles': [
+      true,
+      {
+        severity: 'warning',
+      },
+    ],
     'prettier/prettier': true,
     'selector-max-id': 0,
     'selector-max-type': [
