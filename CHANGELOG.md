@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+## 5.4.0
+
+### Added
+
+- Install `@skyscanner/stylelint-plugin-backpack` and enable `use-typography-styles` rule as warning to encourage the use of Backpack typography styles
+
 ## 5.3.0
 
 ### Updated
