@@ -1,3 +1,5 @@
 # UNRELEASED
 
-This project adheres to [Semantic Versioning](http://semver.org/).
+### Added
+
+- Install `@skyscanner/stylelint-plugin-backpack` and enable `use-typography-styles` rule as warning to encourage the use of Backpack typography styles

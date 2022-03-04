@@ -20,12 +20,19 @@ const camelCase = '([a-z0-9]+([A-Z][a-z0-9]+)*)'; // camelCase
 module.exports = {
   extends: ['stylelint-config-standard-scss', 'stylelint-prettier/recommended'],
   plugins: [
+    '@skyscanner/stylelint-plugin-backpack',
     'stylelint-scss',
     'stylelint-declaration-strict-value',
     'stylelint-order',
     'stylelint-prettier',
   ],
   rules: {
+    'backpack/use-typography-styles': [
+      true,
+      {
+        severity: 'warning',
+      },
+    ],
     'prettier/prettier': true,
     'selector-max-id': 0,
     'selector-max-type': [
