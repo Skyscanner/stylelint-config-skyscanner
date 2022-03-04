@@ -377,4 +377,32 @@ describe('at rules errors', () => {
         }),
       ]),
     ));
+
+const invalidTypographyCSS = `.invalid-class {
+  font-size: $bpk-font-size-xl;
+}
+`;
+
+describe('flags use-typography-styles', () => {
+  let result;
+
+  beforeEach(() => {
+    result = stylelint.lint({
+      code: invalidTypographyCSS,
+      config,
+    });
+  });
+
+  it('raised one warning', () =>
+    result.then(data => {
+      console.log("BLA", data.results[0].warnings);
+      // expect(data.results[0].warnings.length).toBe(1)
+      })
+      );
+
+  it('raised correct rule', () =>
+    result.then((data) =>
+      expect(data.results[0].warnings[0].rule).toBe('backpack/use-typography-styles'),
+    ));
+});
 });
