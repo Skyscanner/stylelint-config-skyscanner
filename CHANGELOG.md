@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+## 5.4.1
+
+### Patch
+
+- Corrected install of `@skyscanner/stylelint-plugin-backpack` to `dependencies` instead of `devDependencies`.
+
 ## 5.4.0
 
 ### Added
