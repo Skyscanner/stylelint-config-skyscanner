@@ -4,8 +4,8 @@
   "description": "Skyscanner's stylelint config.",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^12.13.0",
-    "npm": "^6.12.0"
+    "node": "^16.13.0",
+    "npm": "^8.1.0"
   },
   "repository": {
     "type": "git",
@@ -44,8 +44,8 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
-    "@skyscanner/eslint-config-skyscanner": "^11.0.0",
-    "@skyscanner/stylelint-plugin-backpack": "^1.2.0",
+    "@skyscanner/eslint-config-skyscanner": "^12.0.0",
+    "@skyscanner/stylelint-plugin-backpack": "^2.0.0",
     "stylelint": "^14.3.0",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard-scss": "^3.0.0",
