@@ -1,6 +1,6 @@
 {
   "name": "@skyscanner/stylelint-config-skyscanner",
-  "version": "5.4.1",
+  "version": "6.0.0",
   "description": "Skyscanner's stylelint config.",
   "license": "Apache-2.0",
   "engines": {
