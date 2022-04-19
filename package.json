@@ -55,7 +55,7 @@
     "stylelint-scss": "^4.1.0"
   },
   "devDependencies": {
-    "format-package": "^6.1.0",
+    "format-package": "^7.0.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.8",
