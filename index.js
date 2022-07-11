@@ -44,7 +44,14 @@ module.exports = {
     ],
     'selector-max-compound-selectors': 2,
     'declaration-no-important': true,
-    'unit-disallowed-list': ['px'],
+    'unit-disallowed-list': [
+      'px',
+      {
+        ignoreProperties: {
+          px: ['margin-top', 'margin-bottom', '/^padding/', 'border-width'],
+        },
+      },
+    ],
     'selector-class-pattern': [
       `^(${pascalCase}|${kebabCase})` + // block
         `(__(${camelCase}|${kebabCase}))?` + // element
