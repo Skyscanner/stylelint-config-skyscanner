@@ -48,7 +48,7 @@ module.exports = {
       'px',
       {
         ignoreProperties: {
-          px: ['margin-top', 'margin-bottom', '/^padding/', 'border-width'],
+          px: ['margin-top', 'margin-bottom', '/^padding/', '/^border/'],
         },
       },
     ],

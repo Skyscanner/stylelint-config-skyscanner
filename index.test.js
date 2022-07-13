@@ -406,3 +406,45 @@ describe('flags use-typography-styles', () => {
       ),
     ));
 });
+
+const unitsUsageCSS = `.valid-usage {
+  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  padding: 20px 2rem;
+  padding-top: 20px;
+  border: 1px solid #fff;
+  border-width: 10px;
+}
+
+.invalid-usage {
+  margin: 10px 1rem;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+`;
+
+describe('flags unit-disallowed-list', () => {
+  let result;
+
+  beforeEach(() => {
+    result = stylelint.lint({
+      code: unitsUsageCSS,
+      config,
+    });
+  });
+
+  it('raise errors when invalid usage', () =>
+    result.then((data) => {
+      expect(data.errored).toBe(true);
+      expect(data.results[0].warnings).toHaveLength(3);
+
+      data.results[0].warnings.forEach((warn) => {
+        expect(warn).toMatchObject(
+          expect.objectContaining({
+            rule: 'unit-disallowed-list',
+          }),
+        );
+      });
+    }));
+});
