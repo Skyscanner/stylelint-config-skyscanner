@@ -20,7 +20,6 @@
   ],
   "main": "index.js",
   "scripts": {
-    "format:packagejson": "format-package -w",
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
@@ -40,8 +39,7 @@
     ],
     "**/!(package|package-lock).json": "prettier --write",
     "**/*.yml": "prettier --write",
-    "*.js": "npm run lint:fix",
-    "package.json": "npm run format:packagejson"
+    "*.js": "npm run lint:fix"
   },
   "dependencies": {
     "@skyscanner/eslint-config-skyscanner": "^12.0.0",
@@ -55,7 +53,6 @@
     "stylelint-scss": "^4.1.0"
   },
   "devDependencies": {
-    "format-package": "^6.1.0",
     "husky": "^7.0.4",
     "jest": "^27.5.1",
     "lint-staged": "^12.3.8",
