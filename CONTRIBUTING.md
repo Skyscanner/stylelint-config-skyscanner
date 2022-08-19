@@ -12,8 +12,6 @@ This project contains some pre-commit hooks that will format automatically some 
 
 When performing a commit, the modified files will be formatted and added to the commit. In case of not been able to fix any of the issues, the commit will be aborted the list of errors will be displayed in the console.
 
-One of the steps is running a spellchecker for the markdown files. In case of some word requiring an exception, add it to [.spelling](.spelling) file.
-
 ## License
 
 By contributing your code, you agree to license your contribution under the terms of the APLv2: [LICENSE](LICENSE.md)
