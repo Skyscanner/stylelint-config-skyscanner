@@ -16,11 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: nvm install
-        run: nvm install
+      - name: Set the correct npm version
+        run: nvm install && nvm use
 
-      - name: Install deps
-        run: npm ci
+      - name: Install dependencies from npm
+        run: |
+          nvm use
+          npm ci
 
       - name: Run linters
         run: npm run lint
