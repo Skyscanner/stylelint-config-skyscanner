@@ -31,6 +31,3 @@ jobs:
         run: |
           nvm use 
           npm test
-
-      - name: Spellcheck
-        run: npm run spellcheck:ci
