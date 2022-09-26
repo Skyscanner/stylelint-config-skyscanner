@@ -48,7 +48,7 @@
     "stylelint-declaration-strict-value": "^1.8.0",
     "stylelint-order": "^5.0.0",
     "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.1.0"
+    "stylelint-scss": "^4.3.0"
   },
   "devDependencies": {
     "husky": "^7.0.4",
