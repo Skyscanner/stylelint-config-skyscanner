@@ -4,8 +4,8 @@
   "description": "Skyscanner's stylelint config.",
   "license": "Apache-2.0",
   "engines": {
-    "node": "^16.13.0",
-    "npm": "^8.1.0"
+    "node": ">=16.13.0",
+    "npm": ">=8.1.0"
   },
   "repository": {
     "type": "git",
