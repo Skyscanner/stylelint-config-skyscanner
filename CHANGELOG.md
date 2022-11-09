@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+## 6.0.2
+
+- Update `@skyscanner/stylelint-plugin-backpack` and `@skyscanner/eslint-config-skyscanner`
+
 ## 6.0.1
 
 ### Patch
