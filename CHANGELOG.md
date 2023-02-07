@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+## 6.1.0 (deprecated)
+### Updated
+
+- Bump @skyscanner/eslint-config-skyscanner from 12.6.1 to 13.1.0
+- Bump stylelint-config-prettier from 9.0.3 to 9.0.4
+- Bump json5 from 1.0.1 to 1.0.2 (security bump)
+
+This version was incorrectly released as a minor bump, when the side effect of the `@skyscanner/eslint-config-skyscanner` bump to consumers justified it being a major bump. It has been marked as deprecated in npm, and version `7.0.0` should be used instead as soon as it is published.
+
 ## 6.0.2
 
 - Update `@skyscanner/stylelint-plugin-backpack` and `@skyscanner/eslint-config-skyscanner`
