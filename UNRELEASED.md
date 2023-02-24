@@ -1,3 +1,7 @@
 # UNRELEASED
 
 _If `@skyscanner/eslint-config-skyscanner` has a major version change then `@skyscanner/stylelint-config-skyscanner` should also have a major version change, as explained in [the docs](./docs/eslint-as-dependency.md)_
+
+### Updated
+
+- Bump jest from 27.5.1 to 29.4.3
