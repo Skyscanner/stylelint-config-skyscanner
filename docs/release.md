@@ -6,7 +6,7 @@ This package can be published by members of the Koala team and authorised Skysca
 
 To do this:
 - Add a title with the new version for changes in the `CHANGELOG.md` and copy the changes to be published from the `UNRELEASED.md` file to the new section.
-- Stage those changes (`git add CHANGELOG.md`).
+- Stage those changes (`git add CHANGELOG.md UNRELEASED.md`).
 - Run `npm version -f major|minor|patch`. This will create a tagged commit changing the version in `package.json`, and the changes in `CHANGELOG.md`.
 - Run `npm publish`.
 - Run `git push && git push --tags`.
