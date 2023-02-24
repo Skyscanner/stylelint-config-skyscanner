@@ -42,13 +42,13 @@
   "dependencies": {
     "@skyscanner/eslint-config-skyscanner": "^13.1.0",
     "@skyscanner/stylelint-plugin-backpack": "^2.0.1",
-    "stylelint": "^14.3.0",
+    "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard-scss": "^3.0.0",
     "stylelint-declaration-strict-value": "^1.9.2",
     "stylelint-order": "^6.0.2",
     "stylelint-prettier": "^2.0.0",
-    "stylelint-scss": "^4.1.0"
+    "stylelint-scss": "^4.4.0"
   },
   "devDependencies": {
     "husky": "^8.0.3",
