@@ -9,3 +9,4 @@ _If `@skyscanner/eslint-config-skyscanner` has a major version change then `@sky
 - Bump husky from 7.0.4 to 8.0.3
 - Bump lint-staged from 12.3.8 to 13.1.2
 - Bump stylelint-declaration-strict-value from 1.8.0 to 1.9.2
+- Bump stylelint-order from 5.0.0 to 6.0.2
