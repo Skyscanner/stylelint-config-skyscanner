@@ -40,7 +40,7 @@
     "*.js": "npm run lint:fix"
   },
   "dependencies": {
-    "@skyscanner/eslint-config-skyscanner": "^13.2.1",
+    "@skyscanner/eslint-config-skyscanner": "^14.0.0",
     "@skyscanner/stylelint-plugin-backpack": "^2.0.1",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
