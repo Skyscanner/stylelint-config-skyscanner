@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 
 [Unreleased changes](./UNRELEASED.md)
 
+# 8.0.0
+
+- Update @skyscanner/eslint-config-skyscanner to v14.0.0
+
+This triggers a major version bump of @skyscanner/stylelint-config-skyscanner due to https://github.com/Skyscanner/stylelint-config-skyscanner/blob/main/docs/eslint-as-dependency.md.
+
+No changes are expected to CSS linting.
+
 ## 7.1.0
 
 ### Updated
