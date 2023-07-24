@@ -36,7 +36,7 @@ module.exports = {
       },
     ],
 
-    // his rule is purely about code style and the impact of code churn turning this on outweighs our perceived benefit of enforcing it
+    // This rule is purely about code style and the impact of code churn turning this on outweighs our perceived benefit of enforcing it
     // https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/
     'declaration-block-no-redundant-longhand-properties': null,
 
