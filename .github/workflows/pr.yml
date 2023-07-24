@@ -1,0 +1,46 @@
+name: PR
+
+on:
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+env:
+  CACHE_NAME: node-modules-cache
+
+jobs:
+  Create-NPM-Cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Upload to Cache
+        uses: actions/cache@v3.3.1
+        id: npm-cache
+        with:
+          path: |
+            node_modules/
+          key: ${{ env.CACHE_NAME }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
+        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        run: npm ci
+
+  Run-Tests:
+    permissions:
+      statuses: write
+      pull-requests: write
+    needs: [Create-NPM-Cache]
+    uses: ./.github/workflows/_test.yml
