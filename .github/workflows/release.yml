@@ -1,0 +1,74 @@
+name: release
+
+on:
+  release:
+    types: [published]
+
+defaults:
+  run:
+    shell: bash -l {0}
+
+env:
+  CACHE_NAME: node-modules-cache
+
+jobs:
+  Create-NPM-Cache:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Upload to Cache
+        uses: actions/cache@v3.3.1
+        id: npm-cache
+        with:
+          path: |
+            node_modules/
+          key: ${{ env.CACHE_NAME }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
+        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
+        run: npm ci
+
+  Run-Tests:
+    permissions:
+      statuses: write
+      pull-requests: write
+    needs: [Create-NPM-Cache]
+    uses: ./.github/workflows/_test.yml
+
+  Release:
+    name: Release @skyscanner/eslint-config-skyscanner to NPM
+    runs-on: ubuntu-latest
+    environment: Publishing
+    needs: [Create-NPM-Cache, Run-Tests]
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Restore Cache
+        uses: actions/cache/restore@v3.3.1
+        id: npm-cache
+        with:
+          path: |
+            node_modules/
+          key: ${{ env.CACHE_NAME }}-${{ hashFiles('package-lock.json') }}
+
+      - name: Publish NPM package
+        run: |
+          npm version $RELEASE_VERSION --no-git-tag-version
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          RELEASE_VERSION: ${{ github.event.release.tag_name }}
