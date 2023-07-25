@@ -23,7 +23,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npx ensure-node-env@2.0.0",
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "husky": {
     "hooks": {
@@ -40,14 +40,13 @@
     "*.js": "npm run lint:fix"
   },
   "dependencies": {
-    "@skyscanner/eslint-config-skyscanner": "^15.0.0",
-    "@skyscanner/stylelint-plugin-backpack": "^2.0.1",
-    "stylelint": "^14.16.1",
-    "stylelint-config-prettier": "^9.0.4",
-    "stylelint-config-standard-scss": "^3.0.0",
+    "@skyscanner/eslint-config-skyscanner": "^15.2.0",
+    "@skyscanner/stylelint-plugin-backpack": "^3.0.0",
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0",
     "stylelint-declaration-strict-value": "^1.9.2",
     "stylelint-order": "^6.0.2",
-    "stylelint-prettier": "^2.0.0",
+    "stylelint-prettier": "^4.0.0",
     "stylelint-scss": "^4.4.0"
   },
   "devDependencies": {

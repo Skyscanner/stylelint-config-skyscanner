@@ -4,12 +4,11 @@ This package can be published by members of the Koala team and authorised Skysca
 
 ### Stable release
 
-To do this:
-- Add a title with the new version for changes in the `CHANGELOG.md` and copy the changes to be published from the `UNRELEASED.md` file to the new section.
-- Stage those changes (`git add CHANGELOG.md UNRELEASED.md`).
-- Run `npm version -f major|minor|patch`. This will create a tagged commit changing the version in `package.json`, and the changes in `CHANGELOG.md`.
-- Run `npm publish --registry=https://registry.npmjs.org/`.
-- Run `git push && git push --tags`.
+Stable releases are now automated.
+
+After a pull request is merged an authorised member next publishes a release via the [GitHub Release UI](https://github.com/Skyscanner/eslint-config-skyscanner/releases).
+
+This will generate an email confirmation. Once this has been confirmed the tag and release will be generated.
 
 ### Alpha/Beta release
 
