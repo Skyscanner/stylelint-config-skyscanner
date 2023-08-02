@@ -27,13 +27,24 @@ module.exports = {
     'stylelint-prettier',
   ],
   rules: {
+    // Declaring singular values of typography attributes (e.g. `font-weight`) is disallowed. Use a Backpack mixin that sets groups of attributes in sync with the overall design system
+    // https://github.com/Skyscanner/stylelint-plugin-backpack/blob/3acae45c28a015bbdd250b447803da1ac2ed31e8/lib/rules/use-typography-styles/index.js
     'backpack/use-typography-styles': [
       true,
       {
         severity: 'warning',
       },
     ],
-    'prettier/prettier': true,
+
+    // This rule is purely about code style and the impact of code churn turning this on outweighs our perceived benefit of enforcing it
+    // https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/
+    'declaration-block-no-redundant-longhand-properties': null,
+
+    // This suggests syntax that is not compatible with node-sass. It is blocked until we move our standard tooling to dart sass.
+    // https://github.com/Skyscanner/backpack-react-scripts/blob/ccba8c3ae8b3cb178dd8ac4efa749328ede8928b/packages/react-scripts/package.json#L57
+    // https://stylelint.io/user-guide/rules/media-feature-range-notation/
+    'media-feature-range-notation': null,
+
     'selector-max-id': 0,
     'selector-max-type': [
       0,
@@ -67,7 +78,6 @@ module.exports = {
     'property-no-vendor-prefix': true,
     'selector-no-vendor-prefix': true,
     'value-no-vendor-prefix': true,
-    'string-quotes': 'single',
     'font-family-name-quotes': 'always-where-recommended',
     'at-rule-empty-line-before': [
       'always',
@@ -75,12 +85,6 @@ module.exports = {
         except: ['blockless-after-same-name-blockless', 'first-nested'],
         ignore: ['after-comment'],
         ignoreAtRules: ['else'],
-      },
-    ],
-    'block-closing-brace-newline-after': [
-      'always',
-      {
-        ignoreAtRules: ['if', 'else'],
       },
     ],
     'at-rule-no-unknown': null,

@@ -1,10 +1,27 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
+_If `@skyscanner/eslint-config-skyscanner` has a major version change then `@skyscanner/stylelint-config-skyscanner` should also have a major version change, as explained in [the docs](./docs/eslint-as-dependency.md)_
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/) and this project adheres to [Semantic Versioning](http://semver.org/).
+This file remains for historical references, but all new releases are now documented in the package's [Releases page](https://github.com/Skyscanner/eslint-config-skyscanner/releases).
 
-[Unreleased changes](./UNRELEASED.md)
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
+
+# 9.0.0
+
+- Update @skyscanner/eslint-config-skyscanner to v15.0.0
+
+This triggers a major version bump of @skyscanner/stylelint-config-skyscanner due to https://github.com/Skyscanner/stylelint-config-skyscanner/blob/main/docs/eslint-as-dependency.md.
+
+No changes are expected to CSS linting.
+
+# 8.0.0
+
+- Update @skyscanner/eslint-config-skyscanner to v14.0.0
+
+This triggers a major version bump of @skyscanner/stylelint-config-skyscanner due to https://github.com/Skyscanner/stylelint-config-skyscanner/blob/main/docs/eslint-as-dependency.md.
+
+No changes are expected to CSS linting.
 
 ## 7.1.0
 

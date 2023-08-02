@@ -154,7 +154,7 @@ const validCss = `$kebab-case-variable: 3rem;
     display: 'block';
   } @else if $display == 'inline' {
     display: 'inline';
-  } @else {
+  } @else  {
     display: 'inline-block';
   }
 }
@@ -357,12 +357,6 @@ describe('at rules errors', () => {
     result.then((data) =>
       expect(data.results[0].warnings).toEqual([
         expect.objectContaining({
-          rule: 'prettier/prettier',
-        }),
-        expect.objectContaining({
-          rule: 'prettier/prettier',
-        }),
-        expect.objectContaining({
           rule: 'scss/at-else-closing-brace-newline-after',
         }),
         expect.objectContaining({
@@ -374,6 +368,12 @@ describe('at rules errors', () => {
         }),
         expect.objectContaining({
           rule: 'scss/at-if-closing-brace-space-after',
+        }),
+        expect.objectContaining({
+          rule: 'prettier/prettier',
+        }),
+        expect.objectContaining({
+          rule: 'prettier/prettier',
         }),
       ]),
     ));
@@ -410,7 +410,7 @@ describe('flags use-typography-styles', () => {
 // only vertical margins are allowed for non-flexible spacing
 const unitsUsageCSS = `.valid-usage {
   margin-top: 20px;
-  margin-top: 10px;
+  margin-top: 10rem;
   margin-bottom: 100px;
   padding: 20px 2rem;
   padding-top: 20px;
