@@ -40,14 +40,14 @@
     "*.js": "npm run lint:fix"
   },
   "dependencies": {
-    "@skyscanner/eslint-config-skyscanner": "^17.0.0",
+    "@skyscanner/eslint-config-skyscanner": "^17.1.0",
     "@skyscanner/stylelint-plugin-backpack": "^3.0.0",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.1.0",
     "stylelint-declaration-strict-value": "^1.9.2",
-    "stylelint-order": "^6.0.3",
+    "stylelint-order": "^6.0.4",
     "stylelint-prettier": "^4.0.2",
-    "stylelint-scss": "^5.3.1"
+    "stylelint-scss": "^5.3.2"
   },
   "devDependencies": {
     "husky": "^8.0.3",
