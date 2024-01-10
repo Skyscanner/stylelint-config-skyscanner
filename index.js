@@ -97,7 +97,7 @@ module.exports = {
           'Expected function to be kebab-case (scss/at-function-pattern)',
       },
     ],
-    'scss/at-import-no-partial-leading-underscore': true,
+    'scss/load-no-partial-leading-underscore': true,
     'scss/at-mixin-argumentless-call-parentheses': 'never',
     'scss/at-mixin-pattern': [
       `^_?${kebabCase}(__${kebabCase})?(--${kebabCase}?)?-?$`,
