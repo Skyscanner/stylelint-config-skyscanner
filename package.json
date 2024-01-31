@@ -23,12 +23,9 @@
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npx ensure-node-env@2.0.0",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "!(LICENSE)*.md": [
