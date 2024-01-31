@@ -23,12 +23,9 @@
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "pretest": "npx ensure-node-env@2.0.0",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest",
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
   },
   "lint-staged": {
     "!(LICENSE)*.md": [
@@ -50,7 +47,7 @@
     "stylelint-scss": "^5.3.2"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
+    "husky": "^9.0.6",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.0"
   }
