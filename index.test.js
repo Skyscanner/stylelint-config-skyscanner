@@ -1,3 +1,4 @@
+// -- remember to add a test -- //
 const stylelint = require('stylelint');
 
 const config = require('.');
