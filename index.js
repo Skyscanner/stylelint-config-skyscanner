@@ -20,6 +20,7 @@ const camelCase = '([a-z0-9]+([A-Z][a-z0-9]+)*)'; // camelCase
 module.exports = {
   extends: ['stylelint-config-standard-scss', 'stylelint-prettier/recommended'],
   plugins: [
+    'stylelint-no-unsupported-browser-features',
     '@skyscanner/stylelint-plugin-backpack',
     'stylelint-scss',
     'stylelint-declaration-strict-value',
@@ -27,6 +28,24 @@ module.exports = {
     'stylelint-prettier',
   ],
   rules: {
+    'plugin/no-unsupported-browser-features': [
+      true,
+      {
+        browsers: [
+          'Android >= 120',
+          'Chrome >= 109',
+          'Edge >= 120',
+          'Firefox >= 122',
+          'Opera >= 106',
+          'Safari >= 14',
+          'Samsung >= 23',
+          'ie >= 8',
+        ],
+        ignore: [],
+        ignorePartialSupport: true,
+        severity: 'error',
+      },
+    ],
     // Declaring singular values of typography attributes (e.g. `font-weight`) is disallowed. Use a Backpack mixin that sets groups of attributes in sync with the overall design system
     // https://github.com/Skyscanner/stylelint-plugin-backpack/blob/3acae45c28a015bbdd250b447803da1ac2ed31e8/lib/rules/use-typography-styles/index.js
     'backpack/use-typography-styles': [
