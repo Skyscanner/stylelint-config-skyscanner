@@ -31,19 +31,9 @@ module.exports = {
     'plugin/no-unsupported-browser-features': [
       true,
       {
-        browsers: [
-          'Android >= 120',
-          'Chrome >= 109',
-          'Edge >= 120',
-          'Firefox >= 122',
-          'Opera >= 106',
-          'Safari >= 14',
-          'Samsung >= 23',
-          'ie >= 8',
-        ],
-        ignore: [],
+        ignore: ['flexbox', 'css-nesting', 'css3-cursors'],
         ignorePartialSupport: true,
-        severity: 'error',
+        severity: 'warning',
       },
     ],
     // Declaring singular values of typography attributes (e.g. `font-weight`) is disallowed. Use a Backpack mixin that sets groups of attributes in sync with the overall design system
