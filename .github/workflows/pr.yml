@@ -26,21 +26,11 @@ jobs:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Upload to Cache
-        uses: actions/cache@v3.3.1
-        id: npm-cache
-        with:
-          path: |
-            node_modules/
-          key: ${{ env.CACHE_NAME }}-${{ hashFiles('package-lock.json') }}
-
       - name: Install dependencies
-        if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         run: npm ci
 
-  Run-Tests:
-    permissions:
-      statuses: write
-      pull-requests: write
-    needs: [Create-NPM-Cache]
-    uses: ./.github/workflows/_test.yml
+      - name: Run linters
+        run: npm run lint
+
+      - name: Test
+        run: npm test
