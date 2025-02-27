@@ -31,7 +31,7 @@ module.exports = {
     'plugin/no-unsupported-browser-features': [
       true,
       {
-        ignore: ['flexbox', 'css-nesting', 'css3-cursors'],
+        ignore: ['css-when-else', 'flexbox', 'css-nesting', 'css3-cursors'],
         ignorePartialSupport: true,
         severity: 'warning',
       },
