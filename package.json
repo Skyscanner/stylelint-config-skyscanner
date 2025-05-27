@@ -37,7 +37,7 @@
     "*.js": "npm run lint:fix"
   },
   "dependencies": {
-    "@skyscanner/eslint-config-skyscanner": "^21.0.0",
+    "@skyscanner/eslint-config-skyscanner": "^22.1.0",
     "@skyscanner/stylelint-plugin-backpack": "^3.0.0",
     "stylelint": "^15.11.0",
     "stylelint-config-standard-scss": "^11.1.0",
@@ -50,6 +50,6 @@
   "devDependencies": {
     "husky": "^9.1.5",
     "jest": "^29.7.0",
-    "lint-staged": "^15.5.0"
+    "lint-staged": "^16.0.0"
   }
 }
