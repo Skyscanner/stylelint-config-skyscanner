@@ -12,18 +12,18 @@ env:
   CACHE_NAME: node-modules-cache
 
 jobs:
-  Create-NPM-Cache:
+  Install-Lint-Test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Upload to Cache
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v4.2.0
         id: npm-cache
         with:
           path: |
@@ -34,31 +34,30 @@ jobs:
         if: ${{ steps.npm-cache.outputs.cache-hit != 'true' }}
         run: npm ci
 
-  Run-Tests:
-    permissions:
-      statuses: write
-      pull-requests: write
-    needs: [Create-NPM-Cache]
-    uses: ./.github/workflows/_test.yml
+      - name: Run linters
+        run: npm run lint
+
+      - name: Test
+        run: npm test
 
   Release:
     name: Release @skyscanner/eslint-config-skyscanner to NPM
     runs-on: ubuntu-latest
     environment: Publishing
-    needs: [Create-NPM-Cache, Run-Tests]
+    needs: [Install-Lint-Test]
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           ref: main
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Restore Cache
-        uses: actions/cache/restore@v3.3.1
+        uses: actions/cache/restore@v4.2.0
         id: npm-cache
         with:
           path: |
