@@ -1,6 +1,6 @@
-const stylelint = require('stylelint');
+import stylelint from 'stylelint';
 
-const config = require('.');
+import config from './index';
 
 const validCss = `$kebab-case-variable: 3rem;
 

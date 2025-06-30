@@ -17,7 +17,7 @@ const pascalCase = '([A-Z][a-zA-Z0-9]+)'; // PascalCase
 const kebabCase = '([a-z][a-z0-9]*(-[a-z0-9]+)*)'; // kebab-case
 const camelCase = '([a-z0-9]+([A-Z][a-z0-9]+)*)'; // camelCase
 
-module.exports = {
+const config = {
   extends: ['stylelint-config-standard-scss', 'stylelint-prettier/recommended'],
   plugins: [
     'stylelint-no-unsupported-browser-features',
@@ -326,3 +326,5 @@ module.exports = {
     'alpha-value-notation': 'number',
   },
 };
+
+export default config;
