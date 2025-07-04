@@ -141,7 +141,7 @@ const config = {
     'scss/at-else-empty-line-before': 'never',
     'scss/at-if-closing-brace-newline-after': 'always-last-in-chain',
     'scss/at-if-closing-brace-space-after': 'always-intermediate',
-    'scss/load-partial-extension': 'always',
+    'scss/load-partial-extension': 'never',
     'scale-unlimited/declaration-strict-value': [
       ['/color/', 'fill', 'stroke', 'font-size', 'line-height'],
       {
