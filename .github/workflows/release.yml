@@ -11,6 +11,8 @@ defaults:
 env:
   CACHE_NAME: node-modules-cache
 
+permissions: {}
+
 jobs:
   Install-Lint-Test:
     runs-on: ubuntu-latest
