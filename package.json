@@ -28,7 +28,7 @@
     "lint": "eslint . --ignore-path .gitignore",
     "lint:fix": "npm run lint -- --fix",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --runInBand",
-    "prepare": "husky",
+    "prepare": "husky || true",
     "lint-staged": "lint-staged"
   },
   "lint-staged": {
