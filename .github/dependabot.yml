@@ -1,14 +1,45 @@
+# Note: Dependabot security updates (driven by GitHub security advisories)
+# bypass the cooldown and other settings configured below.
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: '/'
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: weekly
-      time: '10:00'
-    open-pull-requests-limit: 10
-    versioning-strategy: increase
-    ignore:
-      - dependency-name: '*'
-        update-types: ['version-update:semver-patch']
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    groups:
+      skyscanner-internal:
+        patterns:
+          - "@skyscanner/*"
+          - "@skyscanner-internal/*"
+      external-dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "@skyscanner/*"
+          - "@skyscanner-internal/*"
     cooldown:
-      default-days: 7
+      default-days: 30
+      exclude:
+        - "@skyscanner/*"
+        - "@skyscanner-internal/*"
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    open-pull-requests-limit: 5
+    groups:
+      skyscanner-internal:
+        patterns:
+          - "skyscanner/*"
+      external-dependencies:
+        patterns:
+          - "*"
+        exclude-patterns:
+          - "skyscanner/*"
+    cooldown:
+      default-days: 30
+      exclude:
+        - "skyscanner/*"
